@@ -1,0 +1,133 @@
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif !important;
+    &-img-background {
+      height: 42vh;
+      width: 100%;
+      background: var(--ion-color-button);
+      background-color: #1055A0;
+    }
+    &-welcome_portal {
+        position: absolute;
+        color: white;
+        font-size: 32px;
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 500;
+        top: 28%;
+        padding-left: 20px;
+        opacity: 1;text-align: left;
+    }
+    &-img {
+      height: 50px;
+      margin-top: 35px;
+    }
+    &-buttons-container {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+  
+      .reset-button-no {
+        height: 50px;
+        width: 47%;
+        --border-color: var(--ion-color-text);
+      }
+      .reset-button-yes {
+        height: 50px;
+        width: 47%;
+        --background: var(--ion-color-text);
+      }
+  
+      ion-button {
+        --border-radius: 5px;
+      }
+    }
+    &-message {
+      color: var(--ion-color-text);
+    }
+    &-note {
+      color: var(--ion-color-medium);
+      margin: 20px 0;
+    }
+    .signin-div {
+        border-radius: 20px;
+        margin: 10px 20px;
+        .login-column {
+            .img-div {
+                text-align: -webkit-center;
+                margin-bottom: 10px;
+                .JKC_logo {
+                    transform: scale(0.6);
+                }
+            }
+            .label {
+                font-family: "Poppins", sans-serif !important;
+                font-weight: 600;
+                font-size: x-large;
+                color: #1A1A1A;
+                padding-bottom: 10px;
+            }
+            .div-authentication {
+                padding-top: 16px;
+                .authentication-col {
+                    column-gap: 20px;
+                    .username-label {
+                    font-size: medium;
+                    font-weight: 600;
+                    color: #1A1A1A;
+                    margin-bottom: 12px;
+                    }
+                    .inp-rows {
+                        width: 100%;
+                        background-color: #EFEFEF;
+                        column-gap: 20px;
+                        padding-left: 18px;
+                        border-radius: 8px;
+                        margin-bottom: 20px !important;
+                        .images {
+                            transform: scale(0.8,0.4);
+                        }
+                        .fields {
+                            width: 80%;
+                            background-color: #EFEFEF;
+                        }
+                    }
+                }
+            }
+            .forgot_password {
+                color: #1055A0;
+                text-align: end;
+                font-size: 14px;
+                font-weight: 500;
+                width: 100%;
+            }
+        }
+
+        .login-button {
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            background-color: #1055A0 !important;
+            border-radius: 6px;
+            text-transform: none;
+        }
+        .error-login-button {
+            --background: var(--ion-color-button);
+            color: var(--ion-color-label);
+            margin-top: 20px;
+            text-transform: initial;
+        }
+        .success-login-button {
+            margin-top: 20px;
+            background: #1055A0 !important;
+            color: var(--ion-color-text-contrast);
+            text-transform: initial;
+        }
+        :host(.button-block) .button-native {
+            background-color: #1055A0 !important;
+        }
+    }
+}
+  

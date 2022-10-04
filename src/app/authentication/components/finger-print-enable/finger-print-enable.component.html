@@ -1,0 +1,36 @@
+<ion-grid class="finger-print-page-container">
+  <ion-row
+    class="ion-justify-content-evenly finger-print-page-container-height"
+  >
+    <div class="welcome-page">
+      <h3 class="welcome-page-text">{{ 'WELCOME.HELLO' | translate }}</h3>
+      <h3 class="welcome-page-text">
+        {{ userName }}
+      </h3>
+      <h4 class="finger-print-title-description">
+        <b>{{ 'AUTH.FINGER_PRINT_TITLE' | translate }}</b>
+      </h4>
+      <h5 class="finger-print-title-description">
+        {{ 'AUTH.FINGER_PRINT_DESCRIPTION' | translate }}
+      </h5>
+    </div>
+    <div>
+      <img
+        class="finger-print-img"
+        src="./assets/pngs/enable-finger-print.png"
+      />
+    </div>
+    <ion-col class="ion-align-self-end">
+      <ion-button
+        class="enable-finger-print-button ion-activatable"
+        (click)="onFingerprint()"
+        >{{ 'BUTTON.ENABLE_FINGER_PRINT' | translate }}
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+      <ion-button (click)="onSkip()" class="skip-button ion-activatable"
+        >{{ 'BUTTON.NOT_RIGHT_NOW' | translate }}
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

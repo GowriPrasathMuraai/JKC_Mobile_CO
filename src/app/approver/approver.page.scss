@@ -1,0 +1,285 @@
+.sub-container {
+    font-family: 'Poppins', sans-serif !important;
+    padding: 20px 30px 20px 30px;
+    .header-row {
+        .header-col {
+            .heading {
+                color: #191919;
+                font-size: 18px;
+                font-family: 'Poppins', sans-serif !important;
+                font-weight: 600;
+            }
+            .info {
+                color: #838383;
+                color: 14px;
+                font-size: 12px;
+            }
+        }
+        .profile-img {
+            border-radius: 50% !important;
+            transform: scale(0.8);
+        }
+    }
+    .card-rows {
+        flex-wrap: wrap;
+        column-gap: 20px;
+        padding-top: 20px;
+        .individual_cards {
+            width: 47%;
+            height: 90px;
+            margin: 0;
+            margin-bottom: 20px;
+            .top-icon {
+                position: absolute;
+                border-radius: 50%;
+                background-color: #969eff;
+                left: 64%;
+                bottom: 52%;
+                width: 70px;
+                border-radius: 50%;
+                height: 70px;
+                .images {
+                    position: absolute;
+                    transform: scale(0.5);
+                    top: 35%;
+                    left: 15%;
+                }
+            }
+            .content {
+                column-gap: 12px;
+                flex-direction: column;
+                padding-left: 12px;
+                height: 100%;
+                .count {
+                    color: #000000;
+                    font-size: 24px;
+                    font-weight: 600;
+                    top: 45%;
+                    position: absolute;
+                }
+                .count-request {
+                    color: #000000;
+                    font-size: 12px;
+                    font-family: 'Poppins', sans-serif !important;
+                    font-weight: 500;
+                    top: 78%;
+                    position: absolute;
+                }
+                .content-heading {
+                    color: #000000;
+                }
+            }
+        }
+        .open_request {
+            background-color: #C6C9EA;
+        }
+        .pending_request {
+            background-color: #D6F896;
+        }
+        .approved {
+            background-color: #BFD8CE;
+        }
+        .rejected {
+            background-color: #E2BAA1;
+        }
+    }
+    .anlytics-card {
+        width: 100%;
+        margin: 0px !important;
+        .chart-recieved {
+            padding: 20px;
+        }
+        #chart {
+            width: 100%;
+        }
+        #piechart {
+            width: 100%;
+        }
+    }
+    .tble_data {
+        width: 100%;
+        padding-top: 30px;
+        .heading {
+            color: #191919;
+            font-size: large;
+            font-weight: 600;
+        }
+        .search-div {
+            flex-direction: row;
+            place-content: space-around;
+            align-items: center;
+        }
+        .btn_bg2 {
+            height: 50px;
+            width: 100%;
+            border-radius: 8px;
+            background-color: #f3f3f4;
+            flex-direction: row;
+            align-items: center;
+            place-content: space-around;
+            writing-mode: vertical-lr;
+            inline-size: min-content;
+            padding: 6px;
+            margin-top: 20px;
+        }
+        .search_img {
+            padding-left: 10px;
+            transform: scale(0.6);
+        }
+        .search_input2 {
+            height: 25px;
+            width: 75% !important;
+            border-radius: 4px;
+            color: #394256;
+            align-self: center;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            padding-left: 10px;
+            background: transparent;
+            color: #0d0c22;
+        }
+        .search_input2:focus {
+            outline: none;
+        }
+
+        .all_tabs {
+            width: 100%;
+            height: 100%;
+            padding: 20px 0px 40px 0px;
+            font-family: 'Poppins', sans-serif !important;
+            .tabs {
+                position: relative;
+                font-family: 'Poppins', sans-serif !important;
+                .tab-button {
+                    --color: var(--ion-color-label);
+                    --color-selected: var(--ion-color-text);
+                    h6 {
+                    font-size: 14px;
+                    font-weight: bold;
+                    }
+                    .tax-freight-width {
+                    min-width: 100px;
+                    }
+                    &-padding-left {
+                    padding-left: 10px;
+                    }
+                }
+                .tab-bar {
+                    height: 50px;
+                    overflow-x: scroll;
+                    width: 100%;
+                    justify-content: flex-start;
+                }
+                .tab-bar::-webkit-scrollbar {
+                    display: none;
+                }
+                .highlight-active-tab {
+                    height: 4px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: var(--ion-color-text);
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+            }
+        }
+        .tab-content {
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+            .card_container {
+                margin-bottom: 20px;
+            }
+            .customer_card {
+                padding: 12px 20px 12px 20px;
+                box-shadow: 1px 1px 6px #00000029;
+                border-radius: 10px;
+                margin: 0;
+                .details {
+                    flex-direction: column;
+                    width: 100%;
+                    column-gap: 10px;
+                    .detailed_row {
+                        width: 100%;
+                        column-gap: 20px;
+                        align-items: center;
+                        place-content: start;
+                        padding-bottom: 16px;
+                        .heading {
+                            font-size: 16px;
+                            font-family: 'Poppins', sans-serif !important;
+                            font-weight: 600;
+                            color: #191919;
+                        }
+                        .subheading {
+                            font-size: small;
+                            font-weight: 600;
+                            font-family: 'Poppins', sans-serif !important;
+                            color: #717171;
+                        }
+                    }
+                    .address {
+                        align-items: center;
+                        place-content: start;
+                        column-gap: 20px;
+                        padding-bottom: 12px;
+                        .images {
+                            transform: scale(0.6);
+                        }
+                        .span_tag {
+                            font-size: 12px;
+                            font-weight: 600;
+                            font-family: 'Poppins', sans-serif !important;
+                            color: #717171;
+                        }
+                        .email {
+                            color: #067EE8;
+                            font-size: 12px;
+                            font-family: 'Poppins', sans-serif !important;
+                            font-weight: 600;
+                        }
+                    }
+                    .item-divider {
+                        border: 1px solid #00000029;
+                        width: 100%;
+                        margin-bottom: 14px;
+                    }
+                    .status {
+                        place-content: space-between;
+                        align-items: center;
+                        .status_div {
+                            align-items: center;
+                            place-content: start;
+                            background-color: #FF8E72;
+                            border-radius: 4px;
+                            height: 30px;
+                            width: 26%;
+                            place-content: space-evenly;
+                            align-content: stretch;
+                            .dot {
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background-color: #fe3300;
+                            }
+                            .status-span {
+                                color: #f83200;
+                                font-size: 14px;
+                                font-family: 'Poppins', sans-serif !important;
+                                font-weight: 500;
+                            }
+                        }
+                        .reivew {
+                            color: #1055A0;
+                            font-size: 14px;
+                            font-weight: 500;
+                            font-family: 'Poppins', sans-serif !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

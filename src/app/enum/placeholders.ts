@@ -1,0 +1,21 @@
+export enum Placeholders {
+    USERNAME = 'username',
+    PASSWORD = 'password',
+    DB = 'jkc-mobile-app-db',
+    TICKET = 'ticket',
+    USERID = 'user-id',
+    ROLE_ID = 'roleId',
+    FIRST_NAME = 'firstName',
+    LAST_NAME = 'lastName',
+    PREVIOUS_URL = 'previousUrl',
+    SLNO = 'slno',
+    ROLE_NAME = 'roleName',
+    FINGER_PRINT = 'isFingerPrintEnabled',
+    LANDSCAPE= "landscape",
+    LANDSCAPE_PRIMARY= "landscape-primary",
+    LANDSCAPE_SECONDARY= "landscape-secondary",
+    PORTRAIT= "portrait",
+    PORTRAIT_PRIMARY= "portrait-primary",
+    PORTRAIT_SECONDARY= "portrait-secondary",
+ }
+  

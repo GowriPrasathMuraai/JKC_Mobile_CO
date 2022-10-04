@@ -1,0 +1,174 @@
+<ion-content>
+    <div class="sub-container">
+      <ion-row class="header-row">
+        <ion-col class="header-col">
+          <h4 class="heading">
+            Approver Insights
+          </h4>
+          <ion-label class="info">
+            View all information about approver insights
+          </ion-label>
+        </ion-col>
+        <!-- <img src="../../assets/mobile-assets/account.png" class="profile-img"> -->
+      </ion-row>
+
+      <ion-row class="card-rows">
+        <ion-card class="individual_cards open_request">
+          <div class="top-icon">
+            <img src="../../assets/mobile-assets/open.png" class="images">
+          </div>
+          <div class="content">
+            <ion-label class="count">
+              100
+            </ion-label>
+            <span class="count-request">
+              OPEN REQUEST
+            </span>
+          </div>
+        </ion-card>
+        <ion-card class="individual_cards pending_request">
+          <div class="top-icon">
+            <img src="../../assets/mobile-assets/pending_request.png" class="images">
+          </div>
+          <div class="content">
+            <ion-label class="count">
+              24
+            </ion-label>
+            <span class="count-request">
+              PENDING REQUEST
+            </span>
+          </div>
+        </ion-card>
+        <ion-card class="individual_cards approved">
+          <div class="top-icon">
+            <img src="../../assets/mobile-assets/approval-symbol-in-badge.png" class="images">
+          </div>
+          <div class="content">
+            <ion-label class="count">
+              96
+            </ion-label>
+            <span class="count-request">
+              APPROVED REQUEST
+            </span>
+          </div>
+        </ion-card>
+        <ion-card class="individual_cards rejected">
+          <div class="top-icon">
+            <img src="../../assets/mobile-assets/reject.png" class="images">
+          </div>
+          <div class="content">
+            <ion-label class="count">
+              96
+            </ion-label>
+            <span class="count-request">
+              SELECTED
+            </span>
+          </div>
+        </ion-card>
+      </ion-row>
+
+      <ion-card class="anlytics-card">
+        <ion-label class="chart-recieved">
+          Overall Recieved
+        </ion-label>
+        <div id="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [stroke]="chartOptions.stroke"
+            [tooltip]="chartOptions.tooltip"
+            [dataLabels]="chartOptions.dataLabels"
+            [grid]="chartOptions.grid"
+          ></apx-chart>
+        </div>
+
+        <div id="piechart">
+          <apx-chart
+            [series]="chartOptions2.series"
+            [chart]="chartOptions2.chart"
+            [labels]="chartOptions2.labels"
+            [fill]="chartOptions2.fill"
+            [dataLabels]="chartOptions2.dataLabels"
+            [responsive]="chartOptions2.responsive"
+          ></apx-chart>
+        </div>
+      </ion-card>
+
+      <div class="tble_data">
+        <ion-label class="heading">
+          Approver Table
+        </ion-label>
+        <div class="btn_bg2">
+          <img src="../../assets/mobile-assets/search.png" class="search_img">
+          <input class="search_input2" autocomplete="off" placeholder="Search using any parameter">
+          <img src="../../assets/mobile-assets/mike.png" class="search_img">
+        </div>
+
+        <div class="all_tabs">
+          <!-- <app-tabs>
+          </app-tabs> -->
+
+          <ion-tabs
+            mode="md" class="tabs">
+            <!-- (ionTabsDidChange)="OnTabChange($event)" -->
+            <ion-tab-bar slot="bottom" class="tab-bar">
+              <ng-container *ngFor="let tab of tabDetails; let i = index">
+                <ion-tab-button
+                  
+                  class="tab-button ion-activatable"
+                  [ngClass]="{'tab-button-padding-left': i === 0}"
+                  (click)="onClick(tab.path);"
+                >
+                  <span class="highlight-active-tab" *ngIf="tab.active"></span>
+                  <ion-label
+                    ><h6 [ngClass]="i == 2 ? 'tax-freight-width': ''" class="landscape-size">
+                      {{ tab.title | translate }}
+                    </h6>
+                  </ion-label>
+                  <ion-ripple-effect></ion-ripple-effect>
+                </ion-tab-button>
+              </ng-container>
+            </ion-tab-bar>
+          </ion-tabs>
+          
+        </div>
+
+        <div class="tab-content">
+          <div class="card_container" *ngFor="let card of tabledetails; let i = index" >
+            <!-- *ngFor="let card of tabDetails; let i = index" -->
+            <ion-card class="customer_card" (click)="onCardClick(card)">
+                <ion-col class="details">
+                  <ion-row class="detailed_row">
+                    <ion-label class="heading">
+                      Customer Name
+                    </ion-label>
+                    <ion-label class="subheading"> ( Domestic )</ion-label>
+                  </ion-row>
+                  <ion-row class="address">
+                    <img src="../../assets/mobile-assets/email.png" class="images">
+                    <span class="email">samplecustomer@gmail.com</span>
+                  </ion-row>
+                  <ion-row class="address">
+                    <img src="../../assets/mobile-assets/phone-call.png" class="images">
+                    <span class="span_tag">+91 - 95668 46321</span>
+                  </ion-row>
+                  <ion-row class="address">
+                    <img src="../../assets/mobile-assets/map.png" class="images">
+                    <span class="span_tag">Coimbatore, India</span>
+                  </ion-row>
+                  <div class="item-divider"></div>
+                  <ion-row class="status">
+                    <ion-row class="status_div">
+                      <div class="dot"></div>
+                      <ion-label class="status-span">OPEN</ion-label>
+                    </ion-row>
+                    <span class="reivew">Review</span>
+                  </ion-row>
+                </ion-col>
+            </ion-card>
+          </div>
+        </div>
+      </div>
+    </div>
+</ion-content>

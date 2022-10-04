@@ -1,0 +1,171 @@
+<ion-toolbar class="toolbar">
+  <app-app-header [title]="title">
+    
+  </app-app-header>
+</ion-toolbar>
+
+<ion-content>
+  <ng-container class="accordion-container">
+    <ion-accordion-group class="grp-accordion">
+      <ion-accordion value="first" class="accordion-I">
+        <ion-item slot="header" class="items">
+          <ion-row class="personal_info">
+            <div class="avatar">
+              <img src="../../../assets/mobile-assets/user_person.png" class="user">
+            </div>
+            <ion-row class="info_details">
+               <span class="info">
+                  Personal Information
+               </span>
+               <span class="contact">
+                  Contact person and address details
+              </span>
+            </ion-row>
+          </ion-row>
+        </ion-item>
+        <div class="ion-padding content" slot="content">
+          <ion-card class="card_content">
+              <ion-row class="in-row">
+                <ion-col class="in-col">
+                    <ion-row class="subrow">
+                      <img src="../../../assets/mobile-assets/category.png" class="img">
+                      <span class="catgry">
+                        Type of Category
+                      </span>
+                    </ion-row>
+                    <ion-row class="next-row">
+                      <div style="width: 20px;"></div>
+                      <span class="hint">
+                        Independent Grocer
+                      </span>
+                    </ion-row>
+                </ion-col>
+
+                <ion-col class="in-col">
+                  <ion-row class="subrow">
+                    <img src="../../../assets/mobile-assets/product.png" class="img">
+                    <span class="catgry">
+                      Type of Product
+                    </span>
+                  </ion-row>
+                  <ion-row class="next-row-II">
+                    <div style="width: 30px;"></div>
+                    <span class="hint">
+                      Mail Order
+                    </span>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+
+              <ion-row class="in-row bottom">
+                <ion-col class="in-col">
+                    <ion-row class="subrow">
+                      <img src="../../../assets/mobile-assets/firm.png" class="img">
+                      <span class="catgry">
+                        Name of the Firm
+                      </span>
+                    </ion-row>
+                    <ion-row class="next-row-II">
+                      <div style="width: 30px;"></div>
+                      <span class="hint">
+                        Axial & Radial engineering industries
+                      </span>
+                    </ion-row>
+                </ion-col>
+              </ion-row>
+          </ion-card>
+          <ion-card class="card_content_II">
+            <ion-row class="in-II-row top">
+              <ion-col class="in-col">
+                  <ion-row class="subrow">
+                    <img src="../../../assets/mobile-assets/map.png" class="img">
+                    <span class="catgry">
+                      Address ( Shop / Road)
+                    </span>
+                  </ion-row>
+                  <ion-row class="next-row-II">
+                    <div style="width: 30px;"></div>
+                    <span class="hint">
+                      1936 Eden Drive, Richmond, Virginia
+                    </span>
+                  </ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row class="in-II-row bottom">
+              <ion-col class="in-col">
+                  <ion-row class="subrow">
+                    <img src="../../../assets/mobile-assets/city.png" class="img">
+                    <span class="catgry">
+                      City / Taluk
+                    </span>
+                  </ion-row>
+                  <ion-row class="next-row">
+                    <div style="width: 28px;"></div>
+                    <span class="hint">
+                      Chattanooga
+                    </span>
+                  </ion-row>
+              </ion-col>
+
+              <ion-col class="in-col">
+                <ion-row class="subrow">
+                  <img src="../../../assets/mobile-assets/state.png" class="img">
+                  <span class="catgry">
+                    State
+                  </span>
+                </ion-row>
+                <ion-row class="next-row-II">
+                  <div style="width: 20px;"></div>
+                  <span class="hint">
+                    Tennessee 
+                  </span>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row class="in-II-row bottom">
+              <ion-col class="in-col">
+                  <ion-row class="subrow">
+                    <img src="../../../assets/mobile-assets/status.png" class="img">
+                    <span class="catgry">
+                      Status of the firm
+                    </span>
+                  </ion-row>
+                  <ion-row class="next-row-II">
+                    <div style="width: 30px;"></div>
+                    <span class="hint">
+                      Operating & Financed
+                    </span>
+                  </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+          <ion-card class="card_content_III">
+              <ion-row class="detailed_row">
+                <ion-label class="heading">
+                  Contact Name
+                </ion-label>
+              </ion-row>
+              <ion-row class="detailed_row-II">
+                <ion-label class="heading">
+                  Timothy Gerald
+                </ion-label>
+                <ion-label class="subheading"> General Manager </ion-label>
+              </ion-row>
+              <ion-row class="address">
+                <img src="../../assets/mobile-assets/email.png" class="images">
+                <span class="email">samplecustomer@gmail.com</span>
+              </ion-row>
+              <ion-row class="address bottom">
+                <img src="../../assets/mobile-assets/phone-call.png" class="images">
+                <span class="span_tag">+91 - 95668 46321</span>
+              </ion-row>
+          </ion-card>
+        </div>
+      </ion-accordion>
+      
+    </ion-accordion-group>
+    <div class="action_btn">
+
+    </div>
+  </ng-container>
+</ion-content>

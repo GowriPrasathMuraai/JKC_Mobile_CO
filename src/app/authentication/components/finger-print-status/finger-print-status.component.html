@@ -1,0 +1,37 @@
+<ion-grid class="finger-print-page-container" *ngIf="status">
+  <ion-row
+    class="ion-justify-content-evenly finger-print-page-container-height"
+  >
+    <div class="user-container">
+      <h4 class="user-container-greetings-username">
+        {{ 'WELCOME.HELLO' | translate }}
+      </h4>
+      <h3 class="user-container-greetings-username">
+        <b>{{ userName }}</b>
+      </h3>
+      <ion-row>
+        <h3 class="user-email">
+          {{ email }}
+        </h3>
+        <ion-button class="logout-button">{{
+          'BUTTON.LOGOUT' | translate
+        }}</ion-button>
+      </ion-row>
+    </div>
+    <div *ngIf="status === 'success'">
+      <img
+        class="success-finger-print"
+        src="./assets/pngs/success-finger-print.png"
+      />
+    </div>
+    <div class="ion-text-center finger-print-error" *ngIf="status === 'error'">
+      <img
+        class="finger-print-error-img"
+        src="./assets/pngs/error-finger-print.png"
+      />
+      <p class="finger-print-error-message">
+        {{ 'AUTH.FINGER_PRINT_ERROR' | translate }}
+      </p>
+    </div>
+  </ion-row>
+</ion-grid>

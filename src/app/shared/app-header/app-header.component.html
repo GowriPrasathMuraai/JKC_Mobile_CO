@@ -1,0 +1,13 @@
+<ion-header class="header" [translucent]="true">
+  <ion-row class="header-margin ion-justify-content-between">
+    <ion-icon
+      *ngIf="!hideBackArrow"
+      name="arrow-back-outline"
+      class="header-back-arrow-icon"
+      (click)="onBackArrow()" 
+    ></ion-icon>
+    
+    <!-- (click)="onBackArrow()" -->
+    <ion-title class="header-title">{{title}} </ion-title>
+  </ion-row>
+</ion-header>

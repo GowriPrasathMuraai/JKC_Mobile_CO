@@ -1,0 +1,35 @@
+{
+    "WELCOME": {
+        "WELCOME_TEXT": "Welcome to",
+        "CUSTOMER_PORTAL": "Customer Portal"
+    },
+    "TABS": {
+        "APPROVER": "Approver",
+        "SETTING": "Settings",
+        "ACCOUNT": "Account"
+    },
+    "SEARCH": {
+        "PLACEHOLDER_SEARCH_INVOICES": "Search Invoices",
+        "NAME_OF_FIRM": "Name of the firm"
+    },
+    "ADDRESS_DETAILS": "Address Details",
+    "PERSONAL_DETAILS": "Personal Details",
+    "SIGN_IN" : {
+        "SIGN_IN": "Sign In",
+        "USER_NAME": "User Name",
+        "PASSWORD": "Password",
+        "FORGOT_PASSWORD": "Forgot Password?",
+        "LOGIN_BUTTON": "Log in",
+        "SIGN_IN_OTP": "Sign In by OTP",
+        "OTP_CODE": "Please enter 6 digit OTP continue",
+        "OTP_REQUEST": "Request for OTP",
+        "EXPIRE_OTP": "OTP will expire in",
+        "MIN": "120 sec"
+    },
+    "TAB_DETAILS" : {
+        "ALL": "All",
+        "OPEN": "Open",
+        "PENDING": "Pending",
+        "APPROVED": "Approved"
+    }
+}

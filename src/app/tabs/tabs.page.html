@@ -1,0 +1,46 @@
+<ion-tabs
+  mode="md"
+  class="tabs-container"
+  (ionTabsDidChange)="onTabChange($event)"
+>
+  <ion-tab-bar slot="bottom" class="tab-bar">
+    <ion-tab-button [tab]="'approver'" class="tab-button">
+      <span class="highlight-active-tab" *ngIf="isApproverSelected"></span>
+      <ion-img class="icon-images" 
+        src="../../assets/mobile-assets/approver selected.png"
+        *ngIf="isApproverSelected"
+      ></ion-img>
+      <ion-img class="icon-images"
+        src="../../assets/mobile-assets/approver.png"
+        *ngIf="!isApproverSelected"
+      ></ion-img>
+      <ion-label><h6 class="pending-medium-size">{{ 'TABS.APPROVER' | translate }}</h6></ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [tab]="'account'" class="tab-button">
+      <span class="highlight-active-tab" *ngIf="isAccountSelected"></span>
+      <ion-img class="icon-images"
+        src="../../assets/mobile-assets/account_selected.png"
+        *ngIf="isAccountSelected"
+      ></ion-img>
+      <ion-img class="icon-images"
+        src="../../assets/mobile-assets/account.png"
+        *ngIf="!isAccountSelected"
+      ></ion-img>
+      <ion-label><h6 class="pending-medium-size">{{ 'TABS.ACCOUNT' | translate }}</h6></ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [tab]="'settings'" class="tab-button">
+      <span class="highlight-active-tab" *ngIf="isSettingSelected"></span>
+      <ion-img class="icon-images"
+        src="../../assets/mobile-assets/settings.png"
+        *ngIf="isSettingSelected"
+      ></ion-img>
+      <ion-img class="icon-images"
+        src="../../assets/mobile-assets/settings.png"
+        *ngIf="!isSettingSelected"
+      ></ion-img>
+      <ion-label><h6 class="pending-medium-size">{{ 'TABS.SETTING' | translate }}</h6></ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

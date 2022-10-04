@@ -1,0 +1,69 @@
+<div class="reset">
+  <div class="reset-img-background">
+    <!-- <img src="../../assets/mobile-assets/Id.png" class="images left"> -->
+    <div class="reset-welcome_portal">
+      {{ 'WELCOME.WELCOME_TEXT' | translate }}
+      <br>
+      {{ 'WELCOME.CUSTOMER_PORTAL' | translate }}
+    </div>
+  </div>
+  <div class="signin-div">
+    <form [formGroup]="loginForm" (ngSubmit)="performLoginForm()">
+      <ion-col class="login-column">
+        <div class="img-div">
+          <img src="../../assets/mobile-assets/logo.png" class="JKC_logo"> 
+        </div>
+        <ion-label class="label">
+          {{ 'SIGN_IN.SIGN_IN' | translate }}
+        </ion-label>
+        <ion-row class="div-authentication">
+          <ion-row class="authentication-col">
+            <ion-label class="username-label">
+              {{ 'SIGN_IN.USER_NAME' | translate }}
+            </ion-label>
+            <ion-row class="inp-rows">
+              <img src="../../assets/mobile-assets/user.png" class="images">
+              <ion-list class="fields">
+                <ion-input  formControlName="username"
+                required type="text" placeholder=""></ion-input>
+              </ion-list>
+            </ion-row>
+          </ion-row>
+
+          <ion-row class="authentication-col">
+            <ion-label class="username-label">
+              {{ 'SIGN_IN.PASSWORD' | translate }}
+            </ion-label>
+            <ion-row class="inp-rows">
+              <img src="../../assets/mobile-assets/password.png" class="images">
+              <ion-list class="fields">
+                <ion-input  formControlName="password"
+                required type="text" placeholder=""></ion-input>
+              </ion-list>
+            </ion-row>
+            <ion-label class="forgot_password">
+              {{ 'SIGN_IN.FORGOT_PASSWORD' | translate }}
+            </ion-label>
+          </ion-row>
+        </ion-row>
+      </ion-col>
+   
+      <ion-button
+        expand="block"
+        type="submit"
+        color="primary"
+        [disabled]="loginForm.invalid"
+        [ngClass]="
+          errorControl.username.errors?.required ||
+          errorControl.password.errors?.minlength ||
+          errorControl.password.errors?.required
+            ? 'error-login-button'
+            : 'success-login-button'
+        "
+        class="login-button ion-activatable"
+        > Log In
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+    </form>
+  </div>
+</div>

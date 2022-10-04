@@ -1,0 +1,100 @@
+<div class="reset">
+  <div class="reset-img-background">
+    <!-- <img src="../../assets/mobile-assets/Id.png" class="images left"> -->
+    <div class="reset-welcome_portal">
+      {{ 'WELCOME.WELCOME_TEXT' | translate }}
+      <br>
+      {{ 'WELCOME.CUSTOMER_PORTAL' | translate }}
+    </div>
+  </div>
+  <div class="signin-div">
+    <form [formGroup]="otpform" (ngSubmit)="performotpform()">
+      <ion-col class="login-column">
+        <div class="img-div">
+          <img src="../../assets/mobile-assets/logo.png" class="JKC_logo"> 
+        </div>
+        <ion-label class="label">
+          {{ 'SIGN_IN.SIGN_IN_OTP' | translate }}
+        </ion-label>
+
+        <ion-row class="div-authentication">
+          <ion-row class="authentication-col">
+            <ion-label class="username-label">
+              {{ 'SIGN_IN.OTP_CODE' | translate }}
+            </ion-label>
+
+            <ion-row class="otp-rows">
+              <ion-row class="inp-rows">
+                <ion-list class="fields">
+                  <ion-input  formControlName="password"
+                  required type="text" placeholder="" class="inp_area"></ion-input>
+                </ion-list>
+              </ion-row>
+              <ion-row class="inp-rows">
+                <ion-list class="fields">
+                  <ion-input  formControlName="password"
+                  required type="text" placeholder=""></ion-input>
+                </ion-list>
+              </ion-row>
+              <ion-row class="inp-rows">
+                <ion-list class="fields">
+                  <ion-input  formControlName="password"
+                  required type="text" placeholder=""></ion-input>
+                </ion-list>
+              </ion-row>
+              <ion-row class="inp-rows">
+                <ion-list class="fields">
+                  <ion-input  formControlName="password"
+                  required type="text" placeholder=""></ion-input>
+                </ion-list>
+              </ion-row>
+              <ion-row class="inp-rows">
+                <ion-list class="fields">
+                  <ion-input  formControlName="password"
+                  required type="text" placeholder=""></ion-input>
+                </ion-list>
+              </ion-row>
+              <ion-row class="inp-rows">
+                <ion-list class="fields">
+                  <ion-input  formControlName="password"
+                  required type="text" placeholder=""></ion-input>
+                </ion-list>
+              </ion-row>
+            </ion-row>
+
+            <ion-row class="forgot_password">
+              <ion-row class="otp-expire">
+                <span>
+                  {{ 'SIGN_IN.EXPIRE_OTP' | translate }}
+                </span>
+                <span class="otp-timing">
+                  {{ 'SIGN_IN.MIN' | translate }}
+                </span>
+              </ion-row>
+              <span class="otp-request">
+                {{ 'SIGN_IN.OTP_REQUEST' | translate }}
+              </span>
+            </ion-row>
+          </ion-row>
+        </ion-row>
+      </ion-col>
+   
+      <ion-button
+        expand="block"
+        type="submit"
+        [disabled]="otpform.invalid"
+        color="success"
+        [ngClass]="
+          errorControl.password.errors?.minlength ||
+          errorControl.password.errors?.maxlength ||
+          errorControl.password.errors?.required
+            ? 'error-login-button'
+            : 'success-login-button'
+        "
+        class="login-button ion-activatable"
+        > Submit
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.header {
+  font-family: 'Poppins', sans-serif !important;
+    &-title {
+      color: #1055A0 !important;
+      font-weight: bold;
+      font-size: 18px;
+      padding-inline: 0;
+    }
+    &-margin {
+      margin: 20px;
+    }
+    &-md::after {
+      background-image: none;
+    }
+    &-back-arrow-icon {
+      margin: 4px 14px 0 0;
+      font-size: 20px;
+      color: var(--ion-color-back-arrow);
+    }
+}
