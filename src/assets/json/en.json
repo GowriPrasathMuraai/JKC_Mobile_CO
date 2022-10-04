@@ -16,7 +16,7 @@
     "PERSONAL_DETAILS": "Personal Details",
     "SIGN_IN" : {
         "SIGN_IN": "Sign In",
-        "USER_NAME": "User Name",
+        "USER_NAME": "Username",
         "PASSWORD": "Password",
         "FORGOT_PASSWORD": "Forgot Password?",
         "LOGIN_BUTTON": "Log in",
