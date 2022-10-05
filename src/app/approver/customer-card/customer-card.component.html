@@ -6,236 +6,382 @@
 
 <ion-content>
   <ng-container class="accordion-container">
-    <ion-accordion-group class="grp-accordion">
-      <ion-accordion value="first" class="accordion-I">
-        <ion-item slot="header" class="items">
-          <ion-row class="personal_info">
-            <div class="avatar">
-              <img src="../../../assets/mobile-assets/user_person.png" class="user">
-            </div>
-            <ion-row class="info_details">
-               <span class="info">
-                  Personal Information
-               </span>
-               <span class="contact">
-                  Contact person and address details
-              </span>
-            </ion-row>
-          </ion-row>
-        </ion-item>
-        <div class="ion-padding content" slot="content">
-          <ion-card class="card_content">
-              <ion-row class="in-row">
-                <ion-col class="in-col">
-                    <ion-row class="subrow">
-                      <img src="../../../assets/mobile-assets/category.png" class="img">
-                      <span class="catgry">
-                        Type of Category
-                      </span>
-                    </ion-row>
-                    <ion-row class="next-row">
-                      <div style="width: 20px;"></div>
-                      <span class="hint">
-                        Independent Grocer
-                      </span>
-                    </ion-row>
-                </ion-col>
-
-                <ion-col class="in-col">
-                  <ion-row class="subrow">
-                    <img src="../../../assets/mobile-assets/product.png" class="img">
-                    <span class="catgry">
-                      Type of Product
-                    </span>
-                  </ion-row>
-                  <ion-row class="next-row-II">
-                    <div style="width: 30px;"></div>
-                    <span class="hint">
-                      Mail Order
-                    </span>
-                  </ion-row>
-                </ion-col>
+    <div class="cluster-accordion">
+      <ion-accordion-group class="grp-accordion">
+        <ion-accordion value="first" class="accordion-I">
+          <ion-item slot="header" class="items">
+            <ion-row class="personal_info">
+              <div class="avatar">
+                <img src="../../../assets/mobile-assets/user_person.png" class="user">
+              </div>
+              <ion-row class="info_details">
+                <span class="info">
+                    Personal Information
+                </span>
+                <span class="contact">
+                    Contact person and address details
+                </span>
               </ion-row>
+            </ion-row>
+          </ion-item>
+          <div class="ion-padding content" slot="content">
+            <ion-card class="card_content">
+                <ion-row class="in-row">
+                  <ion-col class="in-col">
+                      <ion-row class="subrow">
+                        <img src="../../../assets/mobile-assets/category.png" class="img">
+                        <span class="catgry">
+                          Type of Category
+                        </span>
+                      </ion-row>
+                      <ion-row class="next-row">
+                        <div style="width: 20px;"></div>
+                        <span class="hint">
+                          Independent Grocer
+                        </span>
+                      </ion-row>
+                  </ion-col>
 
-              <ion-row class="in-row bottom">
-                <ion-col class="in-col">
+                  <ion-col class="in-col">
                     <ion-row class="subrow">
-                      <img src="../../../assets/mobile-assets/firm.png" class="img">
+                      <img src="../../../assets/mobile-assets/product.png" class="img">
                       <span class="catgry">
-                        Name of the Firm
+                        Type of Product
                       </span>
                     </ion-row>
                     <ion-row class="next-row-II">
                       <div style="width: 30px;"></div>
                       <span class="hint">
-                        Axial & Radial engineering industries
+                        Mail Order
+                      </span>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+
+                <ion-row class="in-row bottom">
+                  <ion-col class="in-col">
+                      <ion-row class="subrow">
+                        <img src="../../../assets/mobile-assets/firm.png" class="img">
+                        <span class="catgry">
+                          Name of the Firm
+                        </span>
+                      </ion-row>
+                      <ion-row class="next-row-II">
+                        <div style="width: 30px;"></div>
+                        <span class="hint">
+                          Axial & Radial engineering industries
+                        </span>
+                      </ion-row>
+                  </ion-col>
+                </ion-row>
+            </ion-card>
+            <ion-card class="card_content_II">
+              <ion-row class="in-II-row top">
+                <ion-col class="in-col">
+                    <ion-row class="subrow">
+                      <img src="../../../assets/mobile-assets/map.png" class="img">
+                      <span class="catgry">
+                        Address ( Shop / Road)
+                      </span>
+                    </ion-row>
+                    <ion-row class="next-row-II">
+                      <div style="width: 30px;"></div>
+                      <span class="hint">
+                        1936 Eden Drive, Richmond, Virginia
                       </span>
                     </ion-row>
                 </ion-col>
               </ion-row>
-          </ion-card>
-          <ion-card class="card_content_II">
-            <ion-row class="in-II-row top">
-              <ion-col class="in-col">
-                  <ion-row class="subrow">
-                    <img src="../../../assets/mobile-assets/map.png" class="img">
-                    <span class="catgry">
-                      Address ( Shop / Road)
-                    </span>
-                  </ion-row>
-                  <ion-row class="next-row-II">
-                    <div style="width: 30px;"></div>
-                    <span class="hint">
-                      1936 Eden Drive, Richmond, Virginia
-                    </span>
-                  </ion-row>
-              </ion-col>
-            </ion-row>
-            <ion-row class="in-II-row bottom">
-              <ion-col class="in-col">
-                  <ion-row class="subrow">
-                    <img src="../../../assets/mobile-assets/city.png" class="img">
-                    <span class="catgry">
-                      City / Taluk
-                    </span>
-                  </ion-row>
-                  <ion-row class="next-row">
-                    <div style="width: 28px;"></div>
-                    <span class="hint">
-                      Chattanooga
-                    </span>
-                  </ion-row>
-              </ion-col>
+              <ion-row class="in-II-row bottom">
+                <ion-col class="in-col">
+                    <ion-row class="subrow">
+                      <img src="../../../assets/mobile-assets/city.png" class="img">
+                      <span class="catgry">
+                        City / Taluk
+                      </span>
+                    </ion-row>
+                    <ion-row class="next-row">
+                      <div style="width: 28px;"></div>
+                      <span class="hint">
+                        Chattanooga
+                      </span>
+                    </ion-row>
+                </ion-col>
 
-              <ion-col class="in-col">
-                <ion-row class="subrow">
-                  <img src="../../../assets/mobile-assets/state.png" class="img">
-                  <span class="catgry">
-                    State
-                  </span>
-                </ion-row>
-                <ion-row class="next-row-II">
-                  <div style="width: 20px;"></div>
-                  <span class="hint">
-                    Tennessee 
-                  </span>
-                </ion-row>
-              </ion-col>
-            </ion-row>
-            <ion-row class="in-II-row bottom">
-              <ion-col class="in-col">
+                <ion-col class="in-col">
                   <ion-row class="subrow">
-                    <img src="../../../assets/mobile-assets/status.png" class="img">
+                    <img src="../../../assets/mobile-assets/state.png" class="img">
                     <span class="catgry">
-                      Status of the firm
+                      State
                     </span>
                   </ion-row>
                   <ion-row class="next-row-II">
-                    <div style="width: 30px;"></div>
+                    <div style="width: 20px;"></div>
                     <span class="hint">
-                      Operating & Financed
+                      Tennessee 
                     </span>
                   </ion-row>
-              </ion-col>
+                </ion-col>
+              </ion-row>
+              <ion-row class="in-II-row bottom">
+                <ion-col class="in-col">
+                    <ion-row class="subrow">
+                      <img src="../../../assets/mobile-assets/status.png" class="img">
+                      <span class="catgry">
+                        Status of the firm
+                      </span>
+                    </ion-row>
+                    <ion-row class="next-row-II">
+                      <div style="width: 30px;"></div>
+                      <span class="hint">
+                        Operating & Financed
+                      </span>
+                    </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+            <ion-card class="card_content_III">
+                <ion-row class="detailed_row">
+                  <ion-label class="heading">
+                    Contact Name
+                  </ion-label>
+                </ion-row>
+                <ion-row class="detailed_row-II">
+                  <ion-label class="heading">
+                    Timothy Gerald
+                  </ion-label>
+                  <ion-label class="subheading"> General Manager </ion-label>
+                </ion-row>
+                <ion-row class="address">
+                  <img src="../../assets/mobile-assets/email.png" class="images">
+                  <span class="email">samplecustomer@gmail.com</span>
+                </ion-row>
+                <ion-row class="address bottom">
+                  <img src="../../assets/mobile-assets/phone-call.png" class="images">
+                  <span class="span_tag">+91 - 95668 46321</span>
+                </ion-row>
+            </ion-card>
+          </div>
+        </ion-accordion>
+        
+        <ion-accordion value="second" class="accordion-II">
+          <ion-item slot="header" class="items">
+            <ion-row class="personal_info">
+              <div class="avatar">
+                <img src="../../../assets/mobile-assets/market.png" class="user">
+              </div>
+              <ion-row class="info_details">
+                <span class="info">
+                    Market Information
+                </span>
+                <span class="contact">
+                    View all market information in here
+                </span>
+              </ion-row>
             </ion-row>
-          </ion-card>
-          <ion-card class="card_content_III">
-              <ion-row class="detailed_row">
-                <ion-label class="heading">
-                  Contact Name
-                </ion-label>
-              </ion-row>
-              <ion-row class="detailed_row-II">
-                <ion-label class="heading">
-                  Timothy Gerald
-                </ion-label>
-                <ion-label class="subheading"> General Manager </ion-label>
-              </ion-row>
-              <ion-row class="address">
-                <img src="../../assets/mobile-assets/email.png" class="images">
-                <span class="email">samplecustomer@gmail.com</span>
-              </ion-row>
-              <ion-row class="address bottom">
-                <img src="../../assets/mobile-assets/phone-call.png" class="images">
-                <span class="span_tag">+91 - 95668 46321</span>
-              </ion-row>
-          </ion-card>
-        </div>
-      </ion-accordion>
-      
-      <ion-accordion value="second" class="accordion-II">
-        <ion-item slot="header" class="items">
-          <ion-row class="personal_info">
-            <div class="avatar">
-              <img src="../../../assets/mobile-assets/market.png" class="user">
-            </div>
-            <ion-row class="info_details">
-               <span class="info">
-                  Market Information
-               </span>
-               <span class="contact">
-                  View all market information in here
-              </span>
-            </ion-row>
-          </ion-row>
-        </ion-item>
-        <div class="ion-padding content" slot="content">
-          <ion-card class="card_content_scII">
-              <ion-row class="row_I">
-                <div class="col_I">
+          </ion-item>
+          <div class="ion-padding content" slot="content">
+            <ion-card class="card_content_scII">
+                <ion-row class="row_I">
+                  <div class="col_I">
+                      <span class="sp_I">
+                        Name of Market
+                      </span>
+                      <span class="sp_II">
+                        Jemaa El Fnaa
+                      </span>
+                  </div>
+                  <div class="col_I">
                     <span class="sp_I">
-                      Name of Market
+                      Market Population
                     </span>
                     <span class="sp_II">
-                      Jemaa El Fnaa
+                      12,230,002
                     </span>
-                </div>
-                <div class="col_I">
-                  <span class="sp_I">
-                    Market Population
-                  </span>
-                  <span class="sp_II">
-                    12,230,002
-                  </span>
-                </div>
-              </ion-row>
-              <ion-row class="row_I">
-                <div class="col_I">
+                  </div>
+                </ion-row>
+                <ion-row class="row_I">
+                  <div class="col_I">
+                      <span class="sp_I">
+                        Market Potential of Area
+                      </span>
+                      <span class="sp_II">
+                        23,438 tons
+                      </span>
+                  </div>
+                  <div class="col_I">
                     <span class="sp_I">
-                      Market Potential of Area
+                      No of Existing Stock
                     </span>
                     <span class="sp_II">
-                      23,438 tons
+                      20,230 tons
                     </span>
-                </div>
-                <div class="col_I">
-                  <span class="sp_I">
-                    No of Existing Stock
-                  </span>
-                  <span class="sp_II">
-                    20,230 tons
-                  </span>
-                </div>
-              </ion-row>
-              <ion-row class="row_II">
+                  </div>
+                </ion-row>
+                <ion-row class="row_II">
+                    <span class="stock_span">
+                      Stock details
+                    </span>
+                    <div class="divider"></div>
+                </ion-row>
+                <ion-row class="row_I">
+                  <div class="col_I">
+                      <span class="sp_I">
+                        Name of Market
+                      </span>
+                      <span class="sp_II">
+                        Jemaa El Fnaa
+                      </span>
+                  </div>
+                  <div class="col_I">
+                    <span class="sp_I">
+                      Market Population
+                    </span>
+                    <span class="sp_II">
+                      12,230,002
+                    </span>
+                  </div>
+                </ion-row>
+                <ion-col class="chips">
+                  <ion-label class="chips-heading">Area served by Stockist</ion-label>
+                  <ion-row class="chips-row_chips">
+                    <ion-chip class="chips-div">
+                      <ion-label class="text">Avatar Chip</ion-label>
+                      <ion-avatar>
+                        <img src="../../../assets/mobile-assets/close.svg" class="avatar"/>
+                      </ion-avatar>
+                    </ion-chip>
+                    
+                    <ion-chip class="chips-div">
+                      <ion-label class="text">Avatar Chip</ion-label>
+                      <ion-avatar>
+                        <img src="../../../assets/mobile-assets/close.svg" class="avatar"/>
+                      </ion-avatar>
+                    </ion-chip>
+
+                    <ion-chip class="chips-div">
+                      <ion-label class="text">Avatar Chip</ion-label>
+                      <ion-avatar>
+                        <img src="../../../assets/mobile-assets/close.svg" class="avatar"/>
+                      </ion-avatar>
+                    </ion-chip>
+
+                    <ion-chip class="chips-div">
+                      <ion-label class="text">Avatar Chip</ion-label>
+                      <ion-avatar>
+                        <img src="../../../assets/mobile-assets/close.svg" class="avatar"/>
+                      </ion-avatar>
+                    </ion-chip>
+
+                    <ion-chip class="chips-div">
+                      <ion-label class="text">Avatar Chip</ion-label>
+                      <ion-avatar>
+                        <img src="../../../assets/mobile-assets/close.svg" class="avatar"/>
+                      </ion-avatar>
+                    </ion-chip>
+                  </ion-row>
+                </ion-col>
+                <ion-row class="row_II">
                   <span class="stock_span">
-                    Stock details
+                    Sales details
+                  </span>
+                  <div class="divider"></div>
+                </ion-row>
+                <ion-row class="row_I">
+                  <div class="col_I">
+                      <span class="sp_I">
+                        Avg monthly sales
+                      </span>
+                      <ion-row class="sp_II">
+                        239 ton’s
+                        <img src="../../../assets/mobile-assets/rise.svg" class="rise_image">
+                      </ion-row>
+                  </div>
+                  <div class="col_I">
+                    <span class="sp_I">
+                      Total Potential of the Party (in MT)
+                    </span>
+                    <span class="sp_II">
+                      348 ton’s
+                    </span>
+                  </div>
+                </ion-row>
+                <ion-row class="row_II">
+                  <span class="stock_span">
+                    Business details
                   </span>
                   <div class="divider"></div>
               </ion-row>
-          </ion-card>
+              <ion-row class="row_I">
+                <div class="col_I">
+                    <span class="sp_I">
+                      Business PAN No
+                    </span>
+                    <span class="sp_II">
+                      ARMWT1201F
+                    </span>
+                </div>
+                <div class="col_I">
+                  <span class="sp_I">
+                    ARMWT1201F
+                  </span>
+                  <span class="sp_II">
+                    ARMWT1201F
+                  </span>
+                </div>
+              </ion-row>
+              <ion-row class="row_I">
+                <div class="col_I">
+                    <span class="sp_I">
+                      Business PAN No
+                    </span>
+                    <span class="sp_II">
+                      ARMWT1201F
+                    </span>
+                </div>
+                <div class="col_I">
+                  <span class="sp_I">
+                    ARMWT1201F
+                  </span>
+                  <span class="sp_II">
+                    ARMWT1201F
+                  </span>
+                </div>
+              </ion-row>
+            </ion-card>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+      <ion-row class="btn-fields">
+        <div class="btns refresh">
+          <img src="../../assets/mobile-assets/refresh.png" class="btn-images">
         </div>
-      </ion-accordion>
-    </ion-accordion-group>
+        <div class="btns save">
+          <img src="../../assets/mobile-assets/save.png" class="btn-images">
+        </div>
+        <div class="text_align_save next">
+          <div  class="save_btn" type="submit"
+            >Save & Next
+          </div>
+        </div>
+      </ion-row>
+    </div>
     <div class="action_btn">
         <div class="reject_btn">
-          <img src="../../../assets/mobile-assets/reject.png" class="reject_img">
+          <img src="../../../assets/mobile-assets/reject.svg" class="reject_img">
           <span class="rej_span">Reject</span>
         </div>
         <div class="approve_btn">
           <img src="../../../assets/mobile-assets/reject.png" class="approve_img">
           <span class="app_span">Approve</span>
         </div>
+    </div>
+    <div class="table_div">
+        <ion-row>
+          <ion-label>
+            If selling white cement / Wall Putty (Brand Names & Avg Monthly sales
+          </ion-label>
+        </ion-row>
     </div>
   </ng-container>
 </ion-content>
