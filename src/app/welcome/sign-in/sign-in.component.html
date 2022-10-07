@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="total_div">
-    <form [formGroup]="loginForm" (ngSubmit)="performLoginForm()" class="signin-div">
+    <form [formGroup]="loginForm" (ngSubmit)="LoginClicked()" class="signin-div">
       <ion-col class="login-column">
         <div class="img-div">
           <img src="../../assets/mobile-assets/logo.png" class="JKC_logo"> 
@@ -28,6 +28,9 @@
                 required type="text" placeholder=""></ion-input>
               </ion-list>
             </ion-row>
+            <!-- <p *ngIf="loginForm.get('username').hasError('required')">
+              User name is required
+            </p> -->
           </ion-row>
 
           <ion-row class="authentication-col">
@@ -55,7 +58,6 @@
         [disabled]="loginForm.invalid"
         [ngClass]="
           errorControl.username.errors?.required ||
-          errorControl.password.errors?.minlength ||
           errorControl.password.errors?.required
             ? 'error-login-button'
             : 'success-login-button'

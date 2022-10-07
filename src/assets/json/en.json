@@ -31,5 +31,8 @@
         "OPEN": "Open",
         "PENDING": "Pending",
         "APPROVED": "Approved"
+    },
+    "TOASTER_MESSAGES": {
+        "LOGGED_IN_SUCCESS": "Logged in successfully"
     }
 }
