@@ -432,7 +432,7 @@ ion-accordion .item-inner {
     }
 }
 .table_div {
-    padding: 20px;
+    // padding: 20px;
     .row_cls {
         .head {
             word-wrap: break-word;
@@ -440,15 +440,16 @@ ion-accordion .item-inner {
             font-weight: 500;
             font-family: 'Poppins', sans-serif !important;
             color: #3B3B3B;
+            padding-bottom: 20px;
         }
     }
     .skeleton_div {
-        // cursor: url('http://ionicframework.com/img/finger.png'), auto;
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
         .bar-stable {
-            display: flex;
-            flex-direction: row;
+            background-color: #E5E5E5;
             .title {
                 word-wrap: break-word;
                 font-size: 14px;
@@ -458,8 +459,6 @@ ion-accordion .item-inner {
             }
         }
         .table_content {
-            display: flex;
-            flex-direction: row;
             width: 100%;
             height: 100%;
         }

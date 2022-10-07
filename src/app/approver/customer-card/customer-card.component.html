@@ -352,53 +352,33 @@
           </div>
         </ion-accordion>
         <div class="table_div">
-          <ion-row class="row_cls">
+          <!-- <ion-row class="row_cls">
             <ion-label class="head">
               If selling white cement / Wall Putty (Brand Names & Avg Monthly sales
             </ion-label>
-            <div ng-controller="MyCtrl as ctrl" class="skeleton_div">
-              <ion-header class="bar-stable">
-                  <h1 class="title">If selling White cement / wall putty</h1>
-                  <h1 class="title">WP Avg / Month Sales (in MT)</h1>
-                  <h1 class="title">WC Avg / Month Sales (in MT)</h1>
-              </ion-header>
+            <table ng-controller="MyCtrl as ctrl" class="skeleton_div">
+              <ion-grid class="bar-stable">
+                  <th class="title">If selling White cement / wall putty</th>
+                  <th class="title">WP Avg / Month Sales (in MT)</th>
+                  <th class="title">WC Avg / Month Sales (in MT)</th>
+              </ion-grid>
               <ion-grid class="table_content">
                   <div class="row header">
-                    <div class="col">Utility Company Name</div>
-                    <div class="col">Service Code</div>
-                    <div class="col">Pay Limit</div>
-                    <div class="col">Account Number to Use</div>
+                    <td class="col">Utility Company Name</td>
+                    <td class="col">Service Code</td>
+                    <td class="col">Pay Limit</td>
+                    <td class="col">Account Number to Use</td>
                   </div>
                   <div class="row">
-                    <div class="col">data</div>
-                    <div class="col">data</div>
-                    <div class="col">data.limit</div>
-                    <div class="col">data</div>
+                    <td class="col">data</td>
+                    <td class="col">data</td>
+                    <td class="col">data.limit</td>
+                    <td class="col">data</td>
                   </div>
               </ion-grid>
-            </div>
-          </ion-row>
-<!-- 
-          <div class="tableAlign" fxLayoutGap="20px" *ngIf="!isInvoiceTblEmpty && !isInvoiceTblLoading">
-            <table mat-table [dataSource]="invoiceTblDataSource" multiTemplateDataRows>
-              <ng-container matColumnDef="select">
-                <th mat-header-cell *matHeaderCellDef>
-                </th>
-                <td mat-cell *matCellDef="let row ;let i = index">
-                  <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null; selectionOnChange(row)"
-                    [checked]="selection.isSelected(row)" [disabled]="row.typeBoolean">
-                  </mat-checkbox>
-                </td>
-              </ng-container>
-              <ng-container matColumnDef="{{column}}" *ngFor="let column of invoiceTblColumns | slice:1;">
-                <th mat-header-cell *matHeaderCellDef> {{column.toString().split('_').join('\n')}} </th>
-                <td mat-cell *matCellDef="let element"> {{element[column | lowercase]}} </td>
-              </ng-container>
-        
-              <tr mat-header-row *matHeaderRowDef="invoiceTblColumns;sticky:true"></tr>
-              <tr mat-row *matRowDef="let row; columns: invoiceTblColumns;"></tr>
             </table>
-          </div> -->
+          </ion-row> -->
+
         </div>
       </ion-accordion-group>
       
