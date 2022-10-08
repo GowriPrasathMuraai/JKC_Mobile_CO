@@ -352,34 +352,38 @@
           </div>
         </ion-accordion>
         <div class="table_div">
-          <!-- <ion-row class="row_cls">
-            <ion-label class="head">
-              If selling white cement / Wall Putty (Brand Names & Avg Monthly sales
-            </ion-label>
-            <table ng-controller="MyCtrl as ctrl" class="skeleton_div">
-              <ion-grid class="bar-stable">
-                  <th class="title">If selling White cement / wall putty</th>
-                  <th class="title">WP Avg / Month Sales (in MT)</th>
-                  <th class="title">WC Avg / Month Sales (in MT)</th>
-              </ion-grid>
-              <ion-grid class="table_content">
-                  <div class="row header">
-                    <td class="col">Utility Company Name</td>
-                    <td class="col">Service Code</td>
-                    <td class="col">Pay Limit</td>
-                    <td class="col">Account Number to Use</td>
-                  </div>
-                  <div class="row">
-                    <td class="col">data</td>
-                    <td class="col">data</td>
-                    <td class="col">data.limit</td>
-                    <td class="col">data</td>
-                  </div>
-              </ion-grid>
+         
+            <table mat-table [dataSource]="dataSource">
+          
+              <ng-container matColumnDef="name" sticky>
+                <th mat-header-cell *matHeaderCellDef class="header-row"> If selling White cement / wall putty </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+          
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> WP Avg / Month Sales (in MT) </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+              </ng-container>
+          
+              <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef> WC Avg / Month Sales (in MT) </th>
+                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+              </ng-container>
+          
+          
+              <ng-container matColumnDef="star" stickyEnd>
+                <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+                <td mat-cell *matCellDef="let element">
+                  <mat-icon>more_vert</mat-icon>
+                </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
-          </ion-row> -->
 
-        </div>
+        
+          </div>
       </ion-accordion-group>
       
       <ion-row class="btn-fields">
