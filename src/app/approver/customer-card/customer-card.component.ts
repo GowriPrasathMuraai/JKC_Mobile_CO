@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { format, parseISO }  from 'date-fns'
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'WallmaxX', weight: 1.0079,star : ''},
@@ -34,10 +36,18 @@ export class CustomerCardComponent implements OnInit {
     'star',
   ];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+  showPicker = false;
+  dateValue = format(new Date(), 'dd-MM-yyyy' ) + 'T09:00:00.000Z';
+  dateFormattedString =' ';
+  date = '';
+  constructor() {
+  }
 
   ngOnInit() {
     this.title = 'Customer Name';
   }
-
+  dateChanged (value) {
+    this.dateValue = value;
+    this.dateFormattedString = format(parseISO(value), 'HH:mm, MMM, yyyy');
+  }
 }
