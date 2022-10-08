@@ -504,7 +504,139 @@
             </ion-card>
           </div>
         </ion-accordion>
+        <ion-accordion value="fifth" class="accordion-V">
+          <ion-item slot="header" class="items">
+            <ion-row class="personal_info">
+              <div class="avatar">
+                <img src="../../../assets/mobile-assets/phone-call.png" class="user">
+              </div>
+              <ion-row class="info_details">
+                <span class="info">
+                  Contact / nominee details
+                </span>
+                <span class="contact">
+                  Manage your security & bank deposit here
+                </span>
+              </ion-row>
+            </ion-row>
+          </ion-item>
+          <div class="ion-padding content" slot="content">
+            <ion-card class="card_content">
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields">
+                      <ion-select placeholder="JK Directors / Employee/ Stockists " interface="action-sheet">
+                        <ion-select-option value="Category1">Category1</ion-select-option>
+                        <ion-select-option value="Category2">Category2</ion-select-option>
+                        <ion-select-option value="Category3">Category3</ion-select-option>
+                      </ion-select>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
 
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="Bank Address" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="Police" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="Political Party" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="Sales officer Name" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="ASM Name" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="State Head Name" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+            </ion-card>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="sixth" class="accordion-VI">
+          <ion-item slot="header" class="items">
+            <ion-row class="personal_info">
+              <div class="avatar">
+                <img src="../../../assets/mobile-assets/phone-call.png" class="user">
+              </div>
+              <ion-row class="info_details">
+                <span class="info">
+                  Document required
+                </span>
+                <span class="contact">
+                  Include your required documents
+                </span>
+              </ion-row>
+            </ion-row>
+          </ion-item>
+          <div class="ion-padding content" slot="content">
+            <ion-card class="card_content">
+                <ion-row class="upload-row" [ngClass]="file.length ? 'width_clazz' : 'non-width_clazz'">
+                  <div class="upload-text">
+                    <span class="header">
+                      Copy of Pan Card
+                    </span>
+                    <span class="hint">
+                      File size max upto 2MB
+                    </span>
+                  </div>
+                  <div class="upload_survilence">
+                    <div class="upload_file_btn"  *ngIf="!file">
+                      <img src="../../../assets/mobile-assets/save.png" class="upload_file_img" (click)="upload.click()">
+                      <span class="upload-txt">
+                        Upload
+                      </span>
+                      <ion-input type="file" accept="" hidden #upload (ionChange)="handleChange($event)"></ion-input>
+                    </div>
+                    <ion-card class="up_im" *ngIf="file">
+                      <ion-row class="up-row">
+                        <img src="../../../assets/mobile-assets/picture.svg" class="user">
+                        <div class="datas">
+                          <span class="name">{{file.length > 4 ? (file | slice: 0.4) + '...' : file}}</span>
+                          <span class="size">
+                            Filesize
+                          </span>
+                        </div>
+                        <ion-icon name="close-circle" class="close"></ion-icon>
+                      </ion-row>
+                    </ion-card>
+                  </div>
+                </ion-row>
+            </ion-card>
+          </div>
+        </ion-accordion>
         <div class="table_div">
           <table mat-table [dataSource]="dataSource">
         
