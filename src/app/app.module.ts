@@ -16,7 +16,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AccountPageModule } from './account/account.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/json/', '.json');
@@ -41,8 +40,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     AccountPageModule,
     NgApexchartsModule,
-    BrowserAnimationsModule,
-    MatTableModule],
+    BrowserAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Network],
   bootstrap: [AppComponent],
   exports: [TranslateModule,AppRoutingModule]

@@ -338,6 +338,269 @@ ion-accordion .item-inner {
             }
         }
     }
+    .accordion-III {
+        margin-bottom: 20px;
+        .items {
+            background-color: white !important;
+            .personal_info {
+                column-gap: 20px;
+                
+                .avatar {
+                    align-items: center;
+                    text-align: center;
+                    background-color: #c4e0ff;
+                    width: 40px;
+                    place-self: center;
+                    height: 50%;
+                    border-radius: 10px;
+                    .user {
+                        transform: scale(0.45);
+                        margin-top: 2px;
+                    }
+                }
+                .info_details {
+                    width: 70%;
+                    .info {
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #3B3B3B;
+                    }
+                    .contact {
+                        font-size: 10px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #838383;
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 8px;
+        }
+        .card_content {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 1px 8px #00000029;
+            padding-top: 16px;
+            .datetime_css {
+                width: 100%;
+                background-color: white;
+            }
+            .bottom {
+                padding-bottom: 10px !important;
+            }
+            .checkbox {
+                &-inp-fields {
+                    padding: 0px 12px 0px 12px;
+                    align-items: center;
+                    width: 100%;
+                    place-content: flex-start;
+                    margin-bottom: 20px;
+                }
+                .checkbox-text {
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-family: 'Poppins', sans-serif !important;
+                    color: #9F9F9F;
+                    border-bottom: none !important;
+                }
+                border-bottom: none !important;
+            }
+            .inp-fields {
+                padding: 0px 12px 0px 12px;
+                align-items: center;
+                width: 100%;
+                place-content: space-evenly;
+            }
+            .inp-rows {
+                width: 95%;
+                background-color: #F5F5F5;
+                column-gap: 20px;
+                // padding-left: 10px;
+                border-radius: 8px;
+                margin-bottom: 20px !important;
+                place-content: start;
+                .images {
+                    transform: scale(0.6,0.3);
+                }
+            }
+            .fields-date {
+                width: 90%;
+                height: 97%;
+                align-self: center;
+                align-items: center;
+                place-content: space-evenly;
+                display: flex;
+                background-color: #F5F5F5;
+                .field-items {
+                    background-color: #F5F5F5 !important;
+                    &::part(dialog) {
+                        background-color: #F5F5F5 !important;
+                    }
+                    ion-ripple-effect {
+                        background-color: #F5F5F5 !important;
+                    }
+                }
+                .row-field {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .fields {
+                width: 90%;
+                height: 97%;
+                align-self: center;
+                background-color: #F5F5F5;
+                .field-items {
+                    background-color: #F5F5F5 !important;
+                    &::part(dialog) {
+                        background-color: #F5F5F5 !important;
+                    }
+                    ion-ripple-effect {
+                        background-color: #F5F5F5 !important;
+                    }
+                }
+                .row-field {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .inp-rows {
+                width: 95%;
+                display: table;
+                background-color: #F5F5F5;
+                column-gap: 20px;
+                padding-left: 10px;
+                border-radius: 8px;
+                margin-bottom: 20px !important;
+                .images {
+                    transform: scale(0.6,0.3);
+                }
+            }
+        }
+    }
+    .accordion-IV {
+        margin-bottom: 20px;
+        .items {
+            background-color: white !important;
+            .personal_info {
+                column-gap: 20px;
+                
+                .avatar {
+                    align-items: center;
+                    text-align: center;
+                    background-color: #c4e0ff;
+                    width: 40px;
+                    place-self: center;
+                    height: 50%;
+                    border-radius: 10px;
+                    .user {
+                        transform: scale(0.45);
+                        margin-top: 2px;
+                    }
+                }
+                .info_details {
+                    width: 70%;
+                    .info {
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #3B3B3B;
+                    }
+                    .contact {
+                        font-size: 10px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #838383;
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 8px;
+        }
+        .card_content {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 1px 8px #00000029;
+            padding-top: 16px;
+            .bottom {
+                padding-bottom: 10px !important;
+            }
+            .heading-fields {
+                width: 100%;
+                margin-bottom: 20px !important;
+                align-items: center;
+                place-content: space-between;
+                padding: 0px 20px 0px 20px;
+                .heading {
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: 'Poppins', sans-serif !important;
+                    color: #3B3B3B;
+                }
+                .sub-row {
+                    align-items: center;
+                    place-content: space-around;
+                    background-color: #bfdeff;
+                    border-radius: 4px;
+                    width: 45%;
+                    height: 35px;
+                    .add-icon {
+                        color: #1055A0 !important;
+                    }
+                    .add-new {
+                        color: #1055A0;
+                    }
+                }
+            }
+            .inp-fields {
+                padding: 0px 12px 0px 12px;
+                align-items: center;
+                width: 100%;
+                place-content: space-evenly;
+            }
+            .inp-rows {
+                width: 95%;
+                background-color: #F5F5F5;
+                column-gap: 20px;
+                // padding-left: 10px;
+                border-radius: 8px;
+                margin-bottom: 20px !important;
+                place-content: start;
+                .images {
+                    transform: scale(0.6,0.3);
+                }
+            }
+            .padding {
+                padding-left: 12px;
+            }
+            .fields {
+                width: 90%;
+                height: 97%;
+                align-self: center;
+                background-color: #F5F5F5;
+                .field-items {
+                    background-color: #F5F5F5 !important;
+                    &::part(dialog) {
+                        background-color: #F5F5F5 !important;
+                    }
+                    ion-ripple-effect {
+                        background-color: #F5F5F5 !important;
+                    }
+                }
+                .row-field {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
     .rise_image {
         transform: scale(0.7);
     }
@@ -474,4 +737,19 @@ ion-accordion .ion-accordion-toggle-icon {
 
 ::-webkit-scrollbar {
     display: none !important;
+}
+
+ion-modal .ion-page:not(ion-nav .ion-page) {
+    place-content: space-evenly !important;
+}
+ion-checkbox {
+    --size: 20px;
+    --background-checked: #9F9F9F;
+    border-bottom: none !important;
+    --border-style: none;
+}
+  
+ion-checkbox::part(container) {
+    border-radius: 6px;
+    border: 1px solid #F0F0F0 !important;
 }

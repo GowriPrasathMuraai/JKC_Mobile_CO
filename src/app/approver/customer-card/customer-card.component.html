@@ -351,39 +351,191 @@
             </ion-card>
           </div>
         </ion-accordion>
-        <div class="table_div">
-         
-            <table mat-table [dataSource]="dataSource">
-          
-              <ng-container matColumnDef="name" sticky>
-                <th mat-header-cell *matHeaderCellDef class="header-row"> If selling White cement / wall putty </th>
-                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-              </ng-container>
-          
-              <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef> WP Avg / Month Sales (in MT) </th>
-                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-              </ng-container>
-          
-              <ng-container matColumnDef="weight">
-                <th mat-header-cell *matHeaderCellDef> WC Avg / Month Sales (in MT) </th>
-                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-              </ng-container>
-          
-          
-              <ng-container matColumnDef="star" stickyEnd>
-                <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
-                <td mat-cell *matCellDef="let element">
-                  <mat-icon>more_vert</mat-icon>
-                </td>
-              </ng-container>
-          
-              <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
+        <ion-accordion value="third" class="accordion-III">
+          <ion-item slot="header" class="items">
+            <ion-row class="personal_info">
+              <div class="avatar">
+                <img src="../../../assets/mobile-assets/security_deposit.svg" class="user">
+              </div>
+              <ion-row class="info_details">
+                <span class="info">
+                  Details of Security Deposit
+                </span>
+                <span class="contact">
+                  Manage your security & bank deposit here
+                </span>
+              </ion-row>
+            </ion-row>
+          </ion-item>
+          <div class="ion-padding content" slot="content">
+            <ion-card class="card_content">
+              
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields">
+                      <ion-select placeholder="Type of Product" interface="action-sheet">
+                        <ion-select-option value="Category1">Category1</ion-select-option>
+                        <ion-select-option value="Category2">Category2</ion-select-option>
+                        <ion-select-option value="Category3">Category3</ion-select-option>
+                      </ion-select>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
 
-        
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields">
+                    <ion-input required type="text" placeholder="Leaf Number" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields-date">
+                    <ion-input required type="text" placeholder="Date" class="inp_holders"
+                      value="{{ date | date: 'dd-MMM-yyyy' }}"   readonly="true"></ion-input>
+                    <ion-icon name="calendar" id="open-modal"></ion-icon>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+              <ion-modal trigger="open-modal">
+                <ion-content>
+                    <ng-template>
+                      <ion-datetime [showDefaultButtons]="true"
+                        #popoverDatetime
+                        presentation="date" value="{{date}}"
+                        (ionChange)="date = popoverDatetime.value;">
+                      </ion-datetime>
+                    </ng-template>
+                </ion-content>
+              </ion-modal>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields">
+                    <ion-input required type="text" placeholder="Amount (in words)" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields">
+                    <ion-input required type="text" placeholder="Name of Bank" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="checkbox-inp-fields">
+                <ion-item>
+                  <ion-checkbox slot="start"></ion-checkbox>
+                  <span class="checkbox-text">Advance billing party</span>
+                </ion-item>
+              </ion-row>
+            </ion-card>
           </div>
+        </ion-accordion>
+        <ion-accordion value="fourth" class="accordion-IV">
+          <ion-item slot="header" class="items">
+            <ion-row class="personal_info">
+              <div class="avatar">
+                <img src="../../../assets/mobile-assets/security_deposit.svg" class="user">
+              </div>
+              <ion-row class="info_details">
+                <span class="info">
+                  Bank account Details
+                </span>
+                <span class="contact">
+                  Manage your security & bank deposit here
+                </span>
+              </ion-row>
+            </ion-row>
+          </ion-item>
+          <div class="ion-padding content" slot="content">
+            <ion-card class="card_content">
+              <ion-row class="heading-fields">
+                <span class="heading">
+                  Bank Details
+                </span>
+                <ion-row class="sub-row">
+                  <ion-icon name="add" class="add-icon"></ion-icon>
+                  <span class="add-new">
+                    Add New bank
+                  </span>
+                </ion-row>
+              </ion-row>
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields">
+                      <ion-select placeholder="Bank Name" interface="action-sheet">
+                        <ion-select-option value="Category1">Category1</ion-select-option>
+                        <ion-select-option value="Category2">Category2</ion-select-option>
+                        <ion-select-option value="Category3">Category3</ion-select-option>
+                      </ion-select>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="Bank Address" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="IFSC Code" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+              <ion-row class="inp-fields">
+                <ion-row class="inp-rows">
+                  <ion-list class="fields padding">
+                    <ion-input required type="text" placeholder="Bank Account Number" class="inp_holders"></ion-input>
+                  </ion-list>
+                </ion-row>
+              </ion-row>
+
+            </ion-card>
+          </div>
+        </ion-accordion>
+
+        <div class="table_div">
+          <table mat-table [dataSource]="dataSource">
+        
+            <ng-container matColumnDef="name" sticky>
+              <th mat-header-cell *matHeaderCellDef class="header-row"> If selling White cement / wall putty </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> WP Avg / Month Sales (in MT) </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> WC Avg / Month Sales (in MT) </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+        
+        
+            <ng-container matColumnDef="star" stickyEnd>
+              <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon>more_vert</mat-icon>
+              </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+
       </ion-accordion-group>
       
       <ion-row class="btn-fields">
