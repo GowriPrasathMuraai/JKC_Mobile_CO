@@ -601,6 +601,258 @@ ion-accordion .item-inner {
             }
         }
     }
+    .accordion-V {
+        margin-bottom: 20px;
+        .items {
+            background-color: white !important;
+            .personal_info {
+                column-gap: 20px;
+                
+                .avatar {
+                    align-items: center;
+                    text-align: center;
+                    background-color: #c4e0ff;
+                    width: 40px;
+                    place-self: center;
+                    height: 50%;
+                    border-radius: 10px;
+                    .user {
+                        transform: scale(0.45);
+                        margin-top: 2px;
+                    }
+                }
+                .info_details {
+                    width: 70%;
+                    .info {
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #3B3B3B;
+                    }
+                    .contact {
+                        font-size: 10px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #838383;
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 8px;
+        }
+        .card_content {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 1px 8px #00000029;
+            padding-top: 16px;
+            .bottom {
+                padding-bottom: 10px !important;
+            }
+            .inp-fields {
+                padding: 0px 12px 0px 12px;
+                align-items: center;
+                width: 100%;
+                place-content: space-evenly;
+            }
+            .inp-rows {
+                width: 95%;
+                background-color: #F5F5F5;
+                column-gap: 20px;
+                // padding-left: 10px;
+                border-radius: 8px;
+                margin-bottom: 20px !important;
+                place-content: start;
+                .images {
+                    transform: scale(0.6,0.3);
+                }
+            }
+            .padding {
+                padding-left: 12px;
+            }
+            .fields {
+                width: 90%;
+                height: 97%;
+                align-self: center;
+                background-color: #F5F5F5;
+                .field-items {
+                    background-color: #F5F5F5 !important;
+                    &::part(dialog) {
+                        background-color: #F5F5F5 !important;
+                    }
+                    ion-ripple-effect {
+                        background-color: #F5F5F5 !important;
+                    }
+                }
+                .row-field {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .accordion-VI {
+        margin-bottom: 20px;
+        .items {
+            background-color: white !important;
+            .personal_info {
+                column-gap: 20px;
+                
+                .avatar {
+                    align-items: center;
+                    text-align: center;
+                    background-color: #c4e0ff;
+                    width: 40px;
+                    place-self: center;
+                    height: 50%;
+                    border-radius: 10px;
+                    .user {
+                        transform: scale(0.45);
+                        margin-top: 2px;
+                    }
+                }
+                .info_details {
+                    width: 70%;
+                    .info {
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #3B3B3B;
+                    }
+                    .contact {
+                        font-size: 10px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #838383;
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 8px;
+        }
+        .card_content {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 1px 8px #00000029;
+            padding-top: 16px;
+            .width_clazz {
+                .upload-text {
+                    width: 50%;
+                }
+                .upload_survilence {
+                    width: 50%;
+                }
+            }
+            .non-width_clazz {
+                .upload-text {
+                    width: 60%;
+                }
+                .upload_survilence {
+                    width: 40%;
+                }
+            }
+            .bottom {
+                padding-bottom: 10px !important;
+            }
+            .padding {
+                padding-left: 12px;
+            }
+            .upload-row {
+                padding: 12px;
+                display: flex;
+                align-items: center;
+                .upload-text {
+                    display: flex;
+                    flex-direction: column;
+                    height: 60px;
+                    place-content: space-evenly;
+                    align-items: flex-start;
+                    .header {
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #3B3B3B;
+                    }
+                    .hint {
+                        font-size: 12px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #838383;
+                    }
+                }
+                .upload {
+                    &_survilence {
+                    }
+                    &_file_btn {
+                        align-items: center;
+                        width: 100%;
+                        display: flex;
+                        height: 65%;
+                        flex-direction: row;
+                        border-radius: 4px;
+                        place-content: space-evenly;
+                        background-color: #CFDDEC;
+                        box-shadow: 0px 1px 8px #0000001F;
+                    }
+                    &_file_img {
+                        transform: scale(0.5);
+                    }
+                    &-txt {
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif !important;
+                        color: #1055A0;
+                    }
+                }
+                .close {
+                    transform: scale(1.5);
+                }
+                .up_im {
+                    align-items: center;
+                    width: 100%;
+                    height: 65%;
+                    flex-direction: row;
+                    border-radius: 4px;
+                    place-content: space-around;
+                    box-shadow: 0px 1px 8px #0000001F;
+                    margin: 0 !important;
+                    .up-row {
+                        align-items: stretch;
+                        place-content: space-between;
+                        padding: 6px;
+                        .user {
+                            transform: scale(0.7);
+                            margin-top: 2px;
+                        }
+                        .datas {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            place-content: space-between;
+                            column-gap: 6px;
+                            .name {
+                                font-size: 16px;
+                                font-weight: 500;
+                                font-family: 'Poppins', sans-serif !important;
+                                color: #3B3B3B;
+                            }
+                            .size {
+                                font-size: 12px;
+                                font-weight: 500;
+                                font-family: 'Poppins', sans-serif !important;
+                                color: #838383;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .rise_image {
         transform: scale(0.7);
     }

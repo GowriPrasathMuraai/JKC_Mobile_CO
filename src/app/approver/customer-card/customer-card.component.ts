@@ -38,8 +38,8 @@ export class CustomerCardComponent implements OnInit {
   dataSource = ELEMENT_DATA;
   showPicker = false;
   dateValue = format(new Date(), 'dd-MM-yyyy' ) + 'T09:00:00.000Z';
-  dateFormattedString =' ';
   date = '';
+  file = '';
   constructor() {
   }
 
@@ -48,6 +48,8 @@ export class CustomerCardComponent implements OnInit {
   }
   dateChanged (value) {
     this.dateValue = value;
-    this.dateFormattedString = format(parseISO(value), 'HH:mm, MMM, yyyy');
+  }
+  handleChange(event) {
+    console.log(event.target.files);
   }
 }
