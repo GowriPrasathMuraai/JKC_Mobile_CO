@@ -14,7 +14,9 @@
         src="../../assets/mobile-assets/approver.png"
         *ngIf="!isApproverSelected"
       ></ion-img>
-      <ion-label><h6 class="pending-medium-size">{{ 'TABS.APPROVER' | translate }}</h6></ion-label>
+      <ion-label><h6 class="pending-medium-size" 
+        [ngClass]="isApproverSelected ? 'unselected-class' : 'selected-class'"
+        >{{ 'TABS.APPROVER' | translate }}</h6></ion-label>
     </ion-tab-button>
 
     <ion-tab-button [tab]="'account'" class="tab-button">
@@ -27,7 +29,8 @@
         src="../../assets/mobile-assets/account.png"
         *ngIf="!isAccountSelected"
       ></ion-img>
-      <ion-label><h6 class="pending-medium-size">{{ 'TABS.ACCOUNT' | translate }}</h6></ion-label>
+      <ion-label><h6 class="pending-medium-size"
+        [ngClass]="isAccountSelected ? 'unselected-class' : 'selected-class'">{{ 'TABS.ACCOUNT' | translate }}</h6></ion-label>
     </ion-tab-button>
 
     <ion-tab-button [tab]="'settings'" class="tab-button">
@@ -40,7 +43,8 @@
         src="../../assets/mobile-assets/settings.png"
         *ngIf="!isSettingSelected"
       ></ion-img>
-      <ion-label><h6 class="pending-medium-size">{{ 'TABS.SETTING' | translate }}</h6></ion-label>
+      <ion-label><h6 class="pending-medium-size"
+        [ngClass]="isSettingSelected ? 'unselected-class' : 'selected-class'">{{ 'TABS.SETTING' | translate }}</h6></ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

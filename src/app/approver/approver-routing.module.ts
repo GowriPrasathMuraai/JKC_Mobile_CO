@@ -7,9 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: ApproverPage,
-    // children: [
-    
-    // ]
   },
   {
     path: 'customer-card',
