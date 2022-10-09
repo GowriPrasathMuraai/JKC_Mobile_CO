@@ -13,7 +13,7 @@ export class AccountPage implements OnInit {
   companyInformationForm: FormGroup;
   addressInformationForm: FormGroup;
   personalInformationForm: FormGroup;
-  placeholder = '';
+  placeholder = '';  date = '';
   constructor(private formbuilder: FormBuilder,
     private translateService: TranslateService,) { }
 

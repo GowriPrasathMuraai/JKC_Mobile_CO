@@ -117,9 +117,22 @@
       <ion-row class="inp-rows">
         <img src="../../assets/mobile-assets/DOB.png" class="images">
         <ion-list class="fields">
-          <ion-input required type="text" placeholder="Date of Birth" class="inp_holders"></ion-input>
+          <ion-input required type="text" placeholder="Date of Birth" class="inp_holders"
+            value="{{ date | date: 'dd-MMM-yyyy' }}"   readonly="true"></ion-input>
+          <ion-icon name="calendar" id="open-modal"></ion-icon>
         </ion-list>
       </ion-row>
+      <ion-modal trigger="open-modal">
+        <ion-content>
+            <ng-template>
+              <ion-datetime [showDefaultButtons]="true"
+                #popoverDatetime
+                presentation="date" value="{{date}}"
+                (ionChange)="date = popoverDatetime.value;">
+              </ion-datetime>
+            </ng-template>
+        </ion-content>
+      </ion-modal>
 
       <ion-row class="inp-rows">
         <img src="../../assets/mobile-assets/phone-call.png" class="images">
