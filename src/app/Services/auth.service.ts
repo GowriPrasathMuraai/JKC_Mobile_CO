@@ -18,7 +18,10 @@ export class AuthService {
         this.emitChangeSource.next(change);
     }
     constructor(private _httpClient: HttpClient) {
-        this.baseAddress = environment.baseAddress;
+      this.baseAddress = environment.baseAddress;
+      this.attestrAddress = environment.attestrAddress;
+      this.attestrToken = environment.attestrToken;
+      this.clientId = environment.clientId;
     }
     errorHandler(error: HttpErrorResponse): Observable<string> {
         return throwError(error.error.error_description || error.error || error.message || 'Server Error');
