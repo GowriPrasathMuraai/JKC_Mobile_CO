@@ -33,6 +33,7 @@
         "APPROVED": "Approved"
     },
     "TOASTER_MESSAGES": {
-        "LOGGED_IN_SUCCESS": "Logged in successfully"
+        "LOGGED_IN_SUCCESS": "Logged in successfully",
+        "ERROR_OCCURED": "Error Occured"
     }
-}
+}   

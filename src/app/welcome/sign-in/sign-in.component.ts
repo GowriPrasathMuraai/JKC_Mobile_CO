@@ -28,7 +28,7 @@ export class SignInComponent implements OnInit {
   }
   LoginClicked(): void {
     if (this.loginForm.valid) {
-      this._authService.login(this.loginForm.get('userName').value, this.loginForm.get('password').value).subscribe(
+      this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
         (data) => {
           const dat = data as AuthenticationDetails;
           if (data.isChangePasswordRequired === 'Yes') {
@@ -39,18 +39,25 @@ export class SignInComponent implements OnInit {
         },
         (err) => {
           console.error(err);
-           this.toastService.warning(
+          this.toastService.warning(
             this.translateTextService.getTranslatedText(
-              'TOASTER_MESSAGE.LOGGED_IN_SUCCESS'
+              'TOASTER_MESSAGE.ERROR_OCCURED'
             ),
             1000,
-            'success-internet-toaster',
+            'warning',
             'top'
           );
         }
       );
-      // this._router.navigate(['dashboard']);
-      // this.notificationSnackBarComponent.openSnackBar('Logged in successfully', SnackBarStatus.success);
+      this.navController.navigateRoot(AppNavRouters.MENU);
+      this.toastService.success(
+        this.translateTextService.getTranslatedText(
+          'TOASTER_MESSAGE.LOGGED_IN_SUCCESS'
+        ),
+        1000,
+        'success',
+        'top'
+      );
     } else {
       Object.keys(this.loginForm.controls).forEach(key => {
         const abstractControl = this.loginForm.get(key);
