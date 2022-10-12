@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { Placeholders } from '../enum/placeholders';
 import { AppNavRouters } from '../helpers/router-path';
 import { AuthService } from '../Services/auth.service';
@@ -16,28 +16,49 @@ export class SettingsPage implements OnInit {
   title = '';
   constructor( private readonly storageService: StorageService,
     private navController: NavController,  private _authService: AuthService,
-    public toastService: ToastService, private translateTextService: TranslatetextService) { }
+    public toastService: ToastService, private translateTextService: TranslatetextService,
+    public alertController: AlertController) { }
 
   ngOnInit() {
     this.title = 'Settings';
   }
   logout() {
-    this.storageService.removeItem(Placeholders.USERNAME);
-    this.storageService.removeItem(Placeholders.PASSWORD);
-    this.storageService.removeItem(Placeholders.TOKEN);
-    this.storageService.removeItem(Placeholders.USERID);
-    this.storageService.removeItem(Placeholders.EMAIL_ADDRESS);
-    this.storageService.removeItem(Placeholders.DISPLAY_NAME);
-    this.storageService.removeItem(Placeholders.MANAGER_ID);
-    this.storageService.removeItem(Placeholders.USERROLE);
-    this.toastService.success(
-      this.translateTextService.getTranslatedText(
-        'TOASTER_MESSAGES.LOGGED_OUT_SUCCESS'
+    this.alertController
+    .create({
+      header: this.translateTextService.getTranslatedText(
+        'ALERT.CLOSE'
       ),
-      1000,
-      'success',
-      'top'
-    );
-    this.navController.navigateRoot(AppNavRouters.SIGN_IN);
+      cssClass: 'reject-approve-invoice',
+      buttons: [
+        {
+          text: this.translateTextService.getTranslatedText('BUTTON.CLOSE'),
+        },
+        {
+          text: this.translateTextService.getTranslatedText('BUTTON.OK'),
+          handler: async (data) => {
+            this.storageService.removeItem(Placeholders.USERNAME);
+            this.storageService.removeItem(Placeholders.PASSWORD);
+            this.storageService.removeItem(Placeholders.TOKEN);
+            this.storageService.removeItem(Placeholders.USERID);
+            this.storageService.removeItem(Placeholders.EMAIL_ADDRESS);
+            this.storageService.removeItem(Placeholders.DISPLAY_NAME);
+            this.storageService.removeItem(Placeholders.MANAGER_ID);
+            this.storageService.removeItem(Placeholders.USERROLE);
+            this.toastService.success(
+              this.translateTextService.getTranslatedText(
+                'TOASTER_MESSAGES.LOGGED_OUT_SUCCESS'
+              ),
+              1000,
+              'success',
+              'top'
+            );
+            this.navController.navigateRoot(AppNavRouters.SIGN_IN);        
+          },
+        },
+      ],
+    })
+    .then((res) => {
+      res.present();
+    });
   }
 }

@@ -37,5 +37,12 @@
         "LOGGED_OUT_SUCCESS": "Logged out successfully",
         "ERROR_OCCURED": "Error Occured"
     },
-    "FORM_ERROR": "Enter all the fields"
+    "FORM_ERROR": "Enter all the fields",
+    "ALERT": {
+        "CLOSE": "Are you sure you want to close?"
+    },
+    "BUTTON": {
+        "CLOSE": "Close",
+        "OK": "Ok"
+    }
 }   
