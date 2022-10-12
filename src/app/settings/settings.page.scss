@@ -16,3 +16,9 @@
         }
     }
 }
+::ng-deep .reject-approve-invoice {
+    --max-width: 90%;
+    .alert-title {
+      font-weight: lighter;
+    }
+}

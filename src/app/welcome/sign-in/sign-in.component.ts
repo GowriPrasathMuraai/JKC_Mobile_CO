@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ModalController, NavController } from '@ionic/angular';
+import { LoadingController, ModalController, NavController } from '@ionic/angular';
 import { Placeholders } from 'src/app/enum/placeholders';
 import { AppNavRouters } from 'src/app/helpers/router-path';
 import { AuthenticationDetails } from 'src/app/models/master';
@@ -24,7 +24,8 @@ export class SignInComponent implements OnInit {
     private navController: NavController,  private _authService: AuthService,
     public toastService: ToastService, private translateTextService: TranslatetextService,
     private readonly storageService: StorageService,
-    private modalCtrl: ModalController) { }
+    private modalCtrl: ModalController,
+    public loadingController: LoadingController) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -32,8 +33,18 @@ export class SignInComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
+  async presentLoadingWithOptions() {
+    const loading = await this.loadingController.create({
+      spinner: 'bubbles',
+      message: Placeholders.PLEASE_WAIT_LOGGINGIN,
+      translucent: true,
+      cssClass: 'custom-class custom-loading'
+    });
+    return await loading.present();
+  }
   LoginClicked(): void {
     if (this.loginForm.valid) {
+      this.presentLoadingWithOptions();
       this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
         (data) => {
           console.log(data);
@@ -47,6 +58,7 @@ export class SignInComponent implements OnInit {
         },
         (err) => {
           console.error(err);
+          this.loadingController.dismiss();
           this.toastService.warning(
             this.translateTextService.getTranslatedText(
               'TOASTER_MESSAGES.ERROR_OCCURED'
@@ -69,6 +81,7 @@ export class SignInComponent implements OnInit {
   
   saveUserDetails(data: AuthenticationDetails): void {
     localStorage.setItem('authorizationData', JSON.stringify(data));
+    this.loadingController.dismiss();
     this.toastService.success(
       this.translateTextService.getTranslatedText(
         'TOASTER_MESSAGES.LOGGED_IN_SUCCESS'

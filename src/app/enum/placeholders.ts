@@ -22,6 +22,6 @@ export enum Placeholders {
     MANAGER_ID = 'ManagerID',
     EMAIL_ADDRESS = 'EmailAddress',
     DISPLAY_NAME = 'DisplayName',
-    
+    PLEASE_WAIT_LOGGINGIN = 'Please wait while logging in'
  }
   
