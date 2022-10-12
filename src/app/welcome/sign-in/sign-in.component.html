@@ -40,9 +40,15 @@
             </ion-label>
             <ion-row class="inp-rows">
               <img src="../../assets/mobile-assets/password.png" class="images">
-              <ion-list class="fields">
+              <ion-list class="fields list_visibility">
                 <ion-input  formControlName="password"
-                required type="text" placeholder=""></ion-input>
+                required [type]="passwordType" placeholder="" class="input_field"></ion-input>
+                <ion-icon
+                  item-end
+                  [name]="passwordIcon"
+                  class="eye-icon"
+                  (click)="hideShowPassword()"
+                ></ion-icon>
               </ion-list>
             </ion-row>
             <ion-label class="forgot_password">

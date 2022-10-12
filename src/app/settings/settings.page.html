@@ -5,9 +5,16 @@
 </ion-toolbar>
 
 <ion-content>
-  <div>
-    <ion-row>
-     
+  <div class="setting_div">
+    <ion-row class="row_div">
+      <ion-button
+        expand="block"
+        (click)="logout()"
+        color="primary"
+        class="logout-button ion-activatable"
+        > Log out
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
     </ion-row>
   </div>
 </ion-content>

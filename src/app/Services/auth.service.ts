@@ -28,7 +28,6 @@ export class AuthService {
     }
     login(userName: string, password: string): Observable<any> {
         // tslint:disable-next-line:prefer-const
-        // let data = `grant_type=password&username=${userName}&password=${password}&client_id=${this.clientId}`;
         const loginModel: LoginModel = {
           UserName: userName,
           Password: password,

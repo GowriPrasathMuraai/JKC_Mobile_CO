@@ -3,7 +3,6 @@ export enum Placeholders {
     PASSWORD = 'password',
     DB = 'jkc-mobile-app-db',
     TICKET = 'ticket',
-    USERID = 'user-id',
     ROLE_ID = 'roleId',
     FIRST_NAME = 'firstName',
     LAST_NAME = 'lastName',
@@ -17,5 +16,12 @@ export enum Placeholders {
     PORTRAIT= "portrait",
     PORTRAIT_PRIMARY= "portrait-primary",
     PORTRAIT_SECONDARY= "portrait-secondary",
+    USERROLE = 'User-role',
+    USERID = 'UserID',
+    TOKEN = 'Token',
+    MANAGER_ID = 'ManagerID',
+    EMAIL_ADDRESS = 'EmailAddress',
+    DISPLAY_NAME = 'DisplayName',
+    
  }
   
