@@ -58,8 +58,8 @@ export class AccountPage implements OnInit {
   SubmitFormDetails() {
     if(this.companyInformationForm.valid && this.addressInformationForm && 
        this.personalInformationForm) {
-        console.log(this.companyInformationForm.value,
-          this.addressInformationForm.value, this.personalInformationForm.value);
+        // console.log(this.companyInformationForm.value,
+        //   this.addressInformationForm.value, this.personalInformationForm.value);
         this.personalInformationForm.reset();
         this.companyInformationForm.reset();
         this.addressInformationForm.reset();

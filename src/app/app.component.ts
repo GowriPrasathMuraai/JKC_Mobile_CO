@@ -40,7 +40,6 @@ export class AppComponent implements OnInit, OnDestroy{
     this.currentRouterURL();
   }
   async currentRouterURL() {
-    this.storageService.set(Placeholders.PREVIOUS_URL, this.router.url);
     this.router.events.subscribe(
       (event: NavigationEnd) => {
         if(event instanceof NavigationStart) {
@@ -54,16 +53,10 @@ export class AppComponent implements OnInit, OnDestroy{
 
   backButtonEvent() {
     this.platform.backButton.subscribeWithPriority(0, () => {
-        if ((this.router.url.includes('/account')) && (this.previousUrl.includes('/menu/tabs/home'))) {
-          this.router.navigate(['/menu/tabs/home']);
-        }
-        // else if ((this.router.url.includes('/invoice-details')) && (this.previousUrl.includes('/pending/pending-invoices'))) {
-        //   this.router.navigate(['/menu/tabs/pending/pending-invoices']);
-        // }
-        else if ((this.router.url === '') || (this.router.url === '/menu/tabs/approver'))  {
+        if ((this.router.url === '') || (this.router.url === '/menu/tabs/approver'))  {
           this.presentAlertConfirm();
         }
-        else if (this.router.url === '/menu/tabs/account') {
+        else if(this.router.url === '/menu/tabs/account') {
           this.router.navigate(['/menu/tabs/approver']);
         }
         else {
@@ -82,10 +75,8 @@ export class AppComponent implements OnInit, OnDestroy{
       }, {
         text:  this.translateTextService.getTranslatedText('BUTTON.CLOSE_APP'),
         handler: () => {
-          this.storageService.removeItem(Placeholders.USERID);
-          this.storageService.removeItem(Placeholders.TICKET);
           navigator['app'].exitApp();
-          this.router.navigateByUrl('sign-in');
+          this.router.navigateByUrl('');
         }
       }]
     });

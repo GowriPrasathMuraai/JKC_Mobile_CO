@@ -47,7 +47,6 @@ export class SignInComponent implements OnInit {
       this.presentLoadingWithOptions();
       this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
         (data) => {
-          console.log(data);
           this.storeCredentialsInLocalStorage(data);
           const dat = data as AuthenticationDetails;
           if (data.isChangePasswordRequired === 'Yes') {
