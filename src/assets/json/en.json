@@ -43,6 +43,9 @@
     },
     "BUTTON": {
         "CLOSE": "Close",
-        "OK": "Ok"
+        "OK": "Ok",
+        "EXIT_APP": "Are you sure you want to exit the application",
+        "CLOSE_APP": "Close the app",
+        "CANCEL": "Cancel"
     }
 }   
