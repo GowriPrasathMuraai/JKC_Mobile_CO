@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
+import { ToastService } from '../Services/toast.service';
+import { TranslatetextService } from '../Services/translatetext.service';
 
 @Component({
   selector: 'app-account',
@@ -15,10 +16,9 @@ export class AccountPage implements OnInit {
   personalInformationForm: FormGroup;
   placeholder = '';  date = '';
   constructor(private formbuilder: FormBuilder,
-    private translateService: TranslateService,) { }
+    public toastService: ToastService, private translateTextService: TranslatetextService) { }
 
   ngOnInit() {
-    this.translatePlaceholder('SEARCH.NAME_OF_FIRM');
     this.title = 'Personal Information';
     this.companyInformation();
     this.addressInformation();
@@ -54,9 +54,33 @@ export class AccountPage implements OnInit {
   sortOption(event) {
     console.log(event);
   }
-  translatePlaceholder(text: string) {
-    this.translateService.get(text).subscribe((result) => {
-      this.placeholder = result;
-    });
+
+  SubmitFormDetails() {
+    if(this.companyInformationForm.valid && this.addressInformationForm && 
+       this.personalInformationForm) {
+        console.log(this.companyInformationForm.value,
+          this.addressInformationForm.value, this.personalInformationForm.value);
+        this.personalInformationForm.reset();
+        this.companyInformationForm.reset();
+        this.addressInformationForm.reset();
+    } else {
+      // Object.keys(this.companyInformationForm.controls && this.addressInformationForm.controls 
+      //   && this.personalInformationForm.controls).forEach(key => {
+      //   const companyabstractControl = this.companyInformationForm.get(key);
+      //   companyabstractControl.markAsDirty();
+      //   const addressabstractControl = this.addressInformationForm.get(key);
+      //   addressabstractControl.markAsDirty();
+      //   const personalinfoabstractControl = this.personalInformationForm.get(key);
+      //   personalinfoabstractControl.markAsDirty();
+      // });
+      this.toastService.warning(
+        this.translateTextService.getTranslatedText(
+          'FORM_ERROR'
+        ),
+        1000,
+        'warning',
+        'top'
+      );
+    }
   }
 }

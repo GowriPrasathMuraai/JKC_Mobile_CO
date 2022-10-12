@@ -8,162 +8,172 @@
 
 <ion-content class="account_container">
   <ng-container>
-    <ion-row class="inp-fields">
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/category.png" class="images">
-        <ion-list class="fields">
-          <!-- <ion-item class="field-items"> -->
-            <ion-select placeholder="Type of Category" interface="action-sheet">
-              <ion-select-option value="Category1">Category1</ion-select-option>
-              <ion-select-option value="Category2">Category2</ion-select-option>
-              <ion-select-option value="Category3">Category3</ion-select-option>
-            </ion-select>
-          <!-- </ion-item> -->
-        </ion-list>
+    <form [formGroup]="companyInformationForm" class="company_form">
+      <ion-row class="inp-fields">
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/category.png" class="images">
+          <ion-list class="fields">
+              <ion-select placeholder="Type of Category" interface="action-sheet" 
+                formControlName="categoryTypes">
+                <ion-select-option value="Category1">Category1</ion-select-option>
+                <ion-select-option value="Category2">Category2</ion-select-option>
+                <ion-select-option value="Category3">Category3</ion-select-option>
+              </ion-select>
+          </ion-list>
+        </ion-row>
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/product.png" class="images">
+          <ion-list class="fields">
+              <ion-select placeholder="Type of Product" interface="action-sheet"
+                formControlName="productTypes">
+                <ion-select-option value="Category1">Category1</ion-select-option>
+                <ion-select-option value="Category2">Category2</ion-select-option>
+                <ion-select-option value="Category3">Category3</ion-select-option>
+              </ion-select>
+          </ion-list>
+        </ion-row>
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/firm.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Name of the Firm" class="inp_holders"
+              formControlName="firmName"></ion-input>
+          </ion-list>
+        </ion-row>
       </ion-row>
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/product.png" class="images">
-        <ion-list class="fields">
-            <ion-select placeholder="Type of Product" interface="action-sheet">
-              <ion-select-option value="Category1">Category1</ion-select-option>
-              <ion-select-option value="Category2">Category2</ion-select-option>
-              <ion-select-option value="Category3">Category3</ion-select-option>
-            </ion-select>
-        </ion-list>
-      </ion-row>
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/firm.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" [placeholder]="placeholder" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
-    </ion-row>
-
+    </form>
     <ion-label class="heading-labels">
       {{ 'ADDRESS_DETAILS' | translate }}
     </ion-label>
+    <form [formGroup]="addressInformationForm" class="address_form">
+      <ion-row class="inp-fields">
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/map.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Address ( Shop / Road)" class="inp_holders"
+            formControlName="address"></ion-input>
+          </ion-list>
+        </ion-row>
 
-    <ion-row class="inp-fields">
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/map.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Address ( Shop / Road)" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/city.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="City / Taluk / Teshil / District" class="inp_holders"
+            formControlName="city"></ion-input>
+          </ion-list>
+        </ion-row>
 
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/city.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="City / Taluk / Teshil / District" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/state.png" class="images left">
+          <ion-list class="fields">
+              <ion-select placeholder="State" interface="action-sheet" formControlName="state">
+                <ion-select-option value="Category1">Category1</ion-select-option>
+                <ion-select-option value="Category2">Category2</ion-select-option>
+                <ion-select-option value="Category3">Category3</ion-select-option>
+              </ion-select>
+          </ion-list>
+        </ion-row>
 
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/state.png" class="images left">
-        <ion-list class="fields">
-            <ion-select placeholder="State" interface="action-sheet">
-              <ion-select-option value="Category1">Category1</ion-select-option>
-              <ion-select-option value="Category2">Category2</ion-select-option>
-              <ion-select-option value="Category3">Category3</ion-select-option>
-            </ion-select>
-        </ion-list>
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/pincode.png" class="images">
+          <ion-list class="fields">
+              <ion-select placeholder="Pincode" interface="action-sheet" formControlName="pincode">
+                <ion-select-option value="Category1">Category1</ion-select-option>
+                <ion-select-option value="Category2">Category2</ion-select-option>
+                <ion-select-option value="Category3">Category3</ion-select-option>
+              </ion-select>
+          </ion-list>
+        </ion-row>
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/status.png" class="images">
+          <ion-list class="fields">
+              <ion-select placeholder="Status of the Firm" interface="action-sheet" formControlName="firmStatus">
+                <ion-select-option value="Category1">Category1</ion-select-option>
+                <ion-select-option value="Category2">Category2</ion-select-option>
+                <ion-select-option value="Category3">Category3</ion-select-option>
+              </ion-select>
+          </ion-list>
+        </ion-row>
       </ion-row>
-
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/pincode.png" class="images">
-        <ion-list class="fields">
-            <ion-select placeholder="Pincode" interface="action-sheet">
-              <ion-select-option value="Category1">Category1</ion-select-option>
-              <ion-select-option value="Category2">Category2</ion-select-option>
-              <ion-select-option value="Category3">Category3</ion-select-option>
-            </ion-select>
-        </ion-list>
-      </ion-row>
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/status.png" class="images">
-        <ion-list class="fields">
-            <ion-select placeholder="Status of the Firm" interface="action-sheet">
-              <ion-select-option value="Category1">Category1</ion-select-option>
-              <ion-select-option value="Category2">Category2</ion-select-option>
-              <ion-select-option value="Category3">Category3</ion-select-option>
-            </ion-select>
-        </ion-list>
-      </ion-row>
-    </ion-row>
-
+    </form>
     <ion-label class="heading-labels">
       {{ 'PERSONAL_DETAILS' | translate }}
     </ion-label>
+    <form [formGroup]="personalInformationForm" class="personalinfo_form">
+      <ion-row class="inp-fields">
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/Id.png" class="images left">
+          <ion-list class="fields">
+              <ion-select placeholder="Identity Person" interface="action-sheet" formControlName="identityPerson">
+                <ion-select-option value="Category1">Category1</ion-select-option>
+                <ion-select-option value="Category2">Category2</ion-select-option>
+                <ion-select-option value="Category3">Category3</ion-select-option>
+              </ion-select>
+          </ion-list>
+        </ion-row>
 
-    <ion-row class="inp-fields">
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/Id.png" class="images left">
-        <ion-list class="fields">
-            <ion-select placeholder="Identity Person" interface="action-sheet">
-              <ion-select-option value="Category1">Category1</ion-select-option>
-              <ion-select-option value="Category2">Category2</ion-select-option>
-              <ion-select-option value="Category3">Category3</ion-select-option>
-            </ion-select>
-        </ion-list>
+        <ion-row class="inp-rows left">
+          <img src="../../assets/mobile-assets/personal_name.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Person name" class="inp_holders"
+            formControlName="personName"></ion-input>
+          </ion-list>
+        </ion-row>
+
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/DOB.png" class="images">
+          <ion-list class="fields flex">
+            <ion-input required type="text" placeholder="Date of Birth" class="inp_holders"
+              value="{{ date | date: 'dd-MMM-yyyy' }}"   readonly="true"
+              formControlName="dob"></ion-input>
+            <ion-icon name="calendar" id="open-modal"></ion-icon>
+          </ion-list>
+        </ion-row>
+        <ion-modal trigger="open-modal">
+          <ion-content>
+              <ng-template>
+                <ion-datetime [showDefaultButtons]="true"
+                  #popoverDatetime
+                  presentation="date" value="{{date}}"
+                  (ionChange)="date = popoverDatetime.value;">
+                </ion-datetime>
+              </ng-template>
+          </ion-content>
+        </ion-modal>
+
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/phone-call.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Mobile Number 1" class="inp_holders"
+            formControlName="mobileno1"></ion-input>
+          </ion-list>
+        </ion-row>
+
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/phone-call.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Mobile Number 2 (optional)" class="inp_holders"
+            formControlName="mobileno2"></ion-input>
+          </ion-list>
+        </ion-row>
+
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/email.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Email Address 1" class="inp_holders"
+            formControlName="email1"></ion-input>
+          </ion-list>
+        </ion-row>
+
+        <ion-row class="inp-rows">
+          <img src="../../assets/mobile-assets/email.png" class="images">
+          <ion-list class="fields">
+            <ion-input required type="text" placeholder="Email Address 2 (optional)" class="inp_holders"
+            formControlName="email2"></ion-input>
+          </ion-list>
+        </ion-row>
+
       </ion-row>
-
-      <ion-row class="inp-rows left">
-        <img src="../../assets/mobile-assets/personal_name.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Person name" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
-
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/DOB.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Date of Birth" class="inp_holders"
-            value="{{ date | date: 'dd-MMM-yyyy' }}"   readonly="true"></ion-input>
-          <ion-icon name="calendar" id="open-modal"></ion-icon>
-        </ion-list>
-      </ion-row>
-      <ion-modal trigger="open-modal">
-        <ion-content>
-            <ng-template>
-              <ion-datetime [showDefaultButtons]="true"
-                #popoverDatetime
-                presentation="date" value="{{date}}"
-                (ionChange)="date = popoverDatetime.value;">
-              </ion-datetime>
-            </ng-template>
-        </ion-content>
-      </ion-modal>
-
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/phone-call.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Mobile Number 1" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
-
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/phone-call.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Mobile Number 2 (optional)" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
-
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/email.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Email Address 1" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
-
-      <ion-row class="inp-rows">
-        <img src="../../assets/mobile-assets/email.png" class="images">
-        <ion-list class="fields">
-          <ion-input required type="text" placeholder="Email Address 2 (optional)" class="inp_holders"></ion-input>
-        </ion-list>
-      </ion-row>
-
-    </ion-row>
-
+    </form>
     <ion-row class="btn-fields">
       <div class="btns refresh">
         <img src="../../assets/mobile-assets/refresh.png" class="btn-images">
@@ -171,7 +181,7 @@
       <div class="btns save">
         <img src="../../assets/mobile-assets/save.png" class="btn-images">
       </div>
-      <div class="text_align_save next">
+      <div class="text_align_save next" (click)="SubmitFormDetails()">
         <div  class="save_btn" type="submit"
           >Save & Next
         </div>
